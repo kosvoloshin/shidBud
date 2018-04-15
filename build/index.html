@@ -17,13 +17,15 @@
       <section class="section hero">
         <header class="header">
           <div class="header__top">
-            <div class="header__text">Комплексные решения в сфере строительных услуг</div>
-            <div class="header__contacts">
-              <ul class="contacts">
-                <li class="contacts__item">info@carral.com</li>
-                <li class="contacts__item">+00(123)456 78 90</li>
-                <li class="contacts__item">+00(123)456 78 90</li>
-              </ul>
+            <div class="header__wrap">
+              <div class="header__text">Комплексные решения в сфере строительных услуг</div>
+              <div class="header__contacts">
+                <ul class="contacts">
+                  <li class="contacts__item">info@carral.com</li>
+                  <li class="contacts__item">+00(123)456 78 90</li>
+                  <li class="contacts__item">+00(123)456 78 90</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="header__main">
@@ -43,7 +45,7 @@
         </header>
         <div class="slider">
           <ul class="slider__list" id="slides">
-            <li class="slider__item item-1">
+            <li class="slider__item active">
               <div class="slider__info">
                 <div class="slider__desc">
                   <h2 class="slider__title">ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ</h2>
@@ -54,7 +56,7 @@
                 </div>
               </div>
             </li>
-            <li class="slider__item item-1">
+            <li class="slider__item">
               <div class="slider__info">
                 <div class="slider__desc">
                   <h2 class="slider__title">КРУПНОЗЕРНИСТЫЙ И МЕЛКОЗЕРНИСТЫЙ БЕТОН</h2>
@@ -65,7 +67,7 @@
                 </div>
               </div>
             </li>
-            <li class="slider__item item-1">
+            <li class="slider__item">
               <div class="slider__info">
                 <div class="slider__desc">
                   <h2 class="slider__title">БЕТОН ЛЕТНИЙ И ЗИМНИЙ В КИЕВЕ</h2>
@@ -78,8 +80,12 @@
             </li>
           </ul>
           <div class="slider__buttons">
-            <button class="controls slider__controls-prev" id="previous" type="button"></button>
-            <button class="controls slider__controls-next" id="next" type="button"></button>
+            <button class="controls slider__controls-prev" id="previous" type="button">
+              <div class="controls__triangle-prev"></div>
+            </button>
+            <button class="controls slider__controls-next" id="next" type="button">
+              <div class="controls__triangle-next"></div>
+            </button>
           </div>
         </div>
         <div class="hero-desc">

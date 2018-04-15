@@ -9,33 +9,34 @@ block content
         section.section.hero
             header.header
                 .header__top
-                    .header__text Комплексные решения в сфере строительных услуг
-                    .header__contacts
-                        ul.contacts
-                            li.contacts__item info@carral.com
-                            li.contacts__item +00(123)456 78 90
-                            li.contacts__item +00(123)456 78 90
+                    .header__wrap
+                        .header__text Комплексные решения в сфере строительных услуг
+                        .header__contacts
+                            ul.contacts
+                                li.contacts__item info@carral.com
+                                li.contacts__item +00(123)456 78 90
+                                li.contacts__item +00(123)456 78 90
                 .header__main
                     .header__logo
                         a.logo(href="#"): img.logo__img(src="./assets/images/logo.png")
                     include ../common/menu.pug 
             .slider
                 ul.slider__list#slides
-                    li.slider__item.item-1
+                    li.slider__item.active
                         .slider__info
                             .slider__desc
                                 h2.slider__title ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ
                                 .slider__text
                                     p Высококвалифицированные бригады электриков выполнят работы по монтажу и демонтажу электросетей и электрооборудованию. Качественное выполнение работ по самым высоким  требованиям к электробезопастности.
                                 .button: a.button__link(href="#") ПОДРОБНЕЕ
-                    li.slider__item.item-1
+                    li.slider__item
                         .slider__info
                             .slider__desc
                                 h2.slider__title КРУПНОЗЕРНИСТЫЙ И МЕЛКОЗЕРНИСТЫЙ БЕТОН
                                 .slider__text
                                     p Высококвалифицированные бригады электриков выполнят работы по монтажу и демонтажу электросетей и электрооборудованию. Качественное выполнение работ по самым высоким  требованиям к электробезопастности.
                                 .button: a.button__link(href="#") ПОДРОБНЕЕ
-                    li.slider__item.item-1
+                    li.slider__item
                         .slider__info
                             .slider__desc
                                 h2.slider__title БЕТОН ЛЕТНИЙ И ЗИМНИЙ В КИЕВЕ
@@ -44,7 +45,9 @@ block content
                                 .button: a.button__link(href="#") ПОДРОБНЕЕ
                 .slider__buttons
                     button.controls.slider__controls-prev#previous(type="button")
+                        .controls__triangle-prev
                     button.controls.slider__controls-next#next(type="button")
+                        .controls__triangle-next
             .hero-desc
                 h2.hero-desc__title Оказываемые услуги
                 .hero-desc__text 
