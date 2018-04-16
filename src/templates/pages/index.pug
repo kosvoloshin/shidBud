@@ -20,103 +20,110 @@ block content
                     .header__logo
                         a.logo(href="#"): img.logo__img(src="./assets/images/logo.png")
                     include ../common/menu.pug 
-            .slider
-                ul.slider__list#slides
-                    li.slider__item.active
-                        .slider__info
-                            .slider__desc
-                                h2.slider__title ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ
-                                .slider__text
-                                    p Высококвалифицированные бригады электриков выполнят работы по монтажу и демонтажу электросетей и электрооборудованию. Качественное выполнение работ по самым высоким  требованиям к электробезопастности.
-                                .button: a.button__link(href="#") ПОДРОБНЕЕ
-                    li.slider__item
-                        .slider__info
-                            .slider__desc
-                                h2.slider__title КРУПНОЗЕРНИСТЫЙ И МЕЛКОЗЕРНИСТЫЙ БЕТОН
-                                .slider__text
-                                    p Высококвалифицированные бригады электриков выполнят работы по монтажу и демонтажу электросетей и электрооборудованию. Качественное выполнение работ по самым высоким  требованиям к электробезопастности.
-                                .button: a.button__link(href="#") ПОДРОБНЕЕ
-                    li.slider__item
-                        .slider__info
-                            .slider__desc
-                                h2.slider__title БЕТОН ЛЕТНИЙ И ЗИМНИЙ В КИЕВЕ
-                                .slider__text
-                                    p Высококвалифицированные бригады электриков выполнят работы по монтажу и демонтажу электросетей и электрооборудованию. Качественное выполнение работ по самым высоким  требованиям к электробезопастности.
-                                .button: a.button__link(href="#") ПОДРОБНЕЕ
-                .slider__buttons
-                    button.controls.slider__controls-prev#previous(type="button")
-                        .controls__triangle-prev
-                    button.controls.slider__controls-next#next(type="button")
-                        .controls__triangle-next
+            .slider.wrap#slides
+                .slider__content.b-carousel.js-carousel
+                    ul.slider__list.b-carousel__wrap.js-carousel__wrap
+                        li.slider__item.b-carousel__item
+                            .slider__info
+                                .slider__desc
+                                    h2.slider__title ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ
+                                    .slider__text
+                                        p Высококвалифицированные бригады электриков выполнят работы по монтажу и демонтажу электросетей и электрооборудованию. Качественное выполнение работ по самым высоким  требованиям к электробезопастности.
+                                    .button: a.button__link(href="#") ПОДРОБНЕЕ
+                        li.slider__item.b-carousel__item
+                            .slider__info
+                                .slider__desc
+                                    h2.slider__title КРУПНОЗЕРНИСТЫЙ И МЕЛКОЗЕРНИСТЫЙ БЕТОН
+                                    .slider__text
+                                        p Высококвалифицированные бригады электриков выполнят работы по монтажу и демонтажу электросетей и электрооборудованию. Качественное выполнение работ по самым высоким  требованиям к электробезопастности.
+                                    .button: a.button__link(href="#") ПОДРОБНЕЕ
+                        li.slider__item.b-carousel__item
+                            .slider__info
+                                .slider__desc
+                                    h2.slider__title БЕТОН ЛЕТНИЙ И ЗИМНИЙ В КИЕВЕ
+                                    .slider__text
+                                        p Высококвалифицированные бригады электриков выполнят работы по монтажу и демонтажу электросетей и электрооборудованию. Качественное выполнение работ по самым высоким  требованиям к электробезопастности.
+                                    .button: a.button__link(href="#") ПОДРОБНЕЕ
+                    .slider__buttons
+                        button.controls.slider__controls-prev.b-carousel__prev.js-carousel__prev(type="button")
+                            .controls__triangle-prev
+                        button.controls.slider__controls-next.b-carousel__next.js-carousel__next(type="button")
+                            .controls__triangle-next
             .hero-desc
-                h2.hero-desc__title Оказываемые услуги
+                h2.hero-desc__title Оказываемые Услуги
                 .hero-desc__text 
                     p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и реализации дальнейших направлений развития. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации модели развития.
         section.section.service
             .service__content
                 ul.service__list
                     li.service__item
-                        .service__image.service-one
+                        .service__image
                             .service__wrap
                                 .service__zoom
+                                    img.service__zoom-logo(src="./assets/images/zoom.png")
                         .service__button: a.service__link(href="#") ДЕМОНТАЖНЫЕ РАБОТЫ
                     li.service__item
-                        .service__image.service-two
+                        .service__image
                             .service__wrap
                                 .service__zoom
+                                    img.service__zoom-logo(src="./assets/images/zoom.png")
                         .service__button: a.service__link(href="#") ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ
                     li.service__item
-                        .service__image.service-three
+                        .service__image
                             .service__wrap
                                 .service__zoom
+                                    img.service__zoom-logo(src="./assets/images/zoom.png")
                         .service__button: a.service__link(href="#") САНТЕХНИЧЕСКИЕ РАБОТЫ
                     li.service__item
-                        .service__image.service-four
+                        .service__image
                             .service__wrap
                                 .service__zoom
+                                    img.service__zoom-logo(src="./assets/images/zoom.png")
                         .service__button: a.service__link(href="#") ОТДЕЛОЧНЫЕ РАБОТЫ
                     li.service__item
-                        .service__image.service-five
+                        .service__image
                             .service__wrap
                                 .service__zoom
+                                    img.service__zoom-logo(src="./assets/images/zoom.png")
                         .service__button: a.service__link(href="#") КРОВЕЛЬНЫЕ РАБОТЫ
                     li.service__item
-                        .service__image.service-six
+                        .service__image
                             .service__wrap
                                 .service__zoom
+                                    img.service__zoom-logo(src="./assets/images/zoom.png")
                         .service__button: a.service__link(href="#") УКЛАДКА ТРОТУАРНОЙ ПЛИТКИ
         section.section.news
             h2.news__title Новости
             ul.news__list
                 li.news__item
-                    .news__image
-                    .desc
-                        h3.desc__title
-                        .desc__text
-                            p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и... информационно-пропагандистское 
-                        .desc__btn: a.desc__btn-link(href="#") ПОДРОБНЕЕ
+                    .news__image.news__image-one
+                    .news-desc
+                        h3.news-desc__title Обеспечение нашей деятельности и идейные соображения 
+                        .news-desc__text
+                            p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и... 
+                        .news-desc__btn: a.news-desc__btn-link(href="#") ПОДРОБНЕЕ
                 li.news__item.news__item--right
-                    .news__image
-                    .desc
-                        h3.desc__title
-                        .desc__text
-                            p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и... информационно-пропагандистское 
-                        .desc__btn: a.desc__btn-link(href="#") ПОДРОБНЕЕ
+                    .news__image.news__image-two
+                    .news-desc
+                        h3.news-desc__title Обеспечение нашей деятельности и идейные соображения 
+                        .news-desc__text
+                            p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и...  
+                        .news-desc__btn: a.news-desc__btn-link(href="#") ПОДРОБНЕЕ
                 li.news__item
-                    .news__image
-                    .desc
-                        h3.desc__title
-                        .desc__text
-                            p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и... информационно-пропагандистское 
-                        .desc__btn: a.desc__btn-link(href="#") ПОДРОБНЕЕ
+                    .news__image.news__image-three
+                    .news-desc
+                        h3.news-desc__title Обеспечение нашей деятельности и идейные соображения 
+                        .news-desc__text
+                            p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и...  
+                        .news-desc__btn: a.news-desc__btn-link(href="#") ПОДРОБНЕЕ
                 li.news__item.news__item--right
-                    .news__image
-                    .desc
-                        h3.desc__title
-                        .desc__text
-                            p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и... информационно-пропагандистское 
-                        .desc__btn: a.desc__btn-link(href="#") ПОДРОБНЕЕ
-        section.section.contacts
+                    .news__image.news__image-four
+                    .news-desc
+                        h3.news-desc__title Обеспечение нашей деятельности и идейные соображения 
+                        .news-desc__text
+                            p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и...  
+                        .news-desc__btn: a.news-desc__btn-link(href="#") ПОДРОБНЕЕ
+        section.section.contacts-footer
             .slider.partners
                 .partners__list
                     li.partners__item: img.partners__image(src="./assets/images/intel.png")

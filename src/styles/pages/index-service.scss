@@ -1,0 +1,119 @@
+.service {
+    height: 80%;
+    width: 100%;
+    background-image: url(../images/bg-service.png);
+    background-repeat: no-repeat;
+    background-position: center 100%;
+    background-size: cover;
+}
+
+.service__content {
+    height: 85%;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.service__list {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: stretch;
+}
+
+.service__item {
+    width: 33.3%;
+    height: 50%;
+    background-image: url(../images/service-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        .service__wrap {
+            background-color: rgba(0, 0, 0, 0.7);
+            transition: .2s;
+        }
+
+        .service__link {
+            background-color: #c32328;
+            transition: .2s;
+        }
+
+        .service__zoom {
+            opacity: 1;
+            transition: .2s;
+        }
+    }
+}
+
+.service__image {
+    height: 100%;
+}
+
+.service__item:nth-child(1) {
+    background-image: url(../images/service-1.jpg);
+}
+
+.service__item:nth-child(2) {
+    background-image: url(../images/service-2.jpg);
+}
+
+.service__item:nth-child(3) {
+    background-image: url(../images/service-3.jpg);
+}
+
+.service__item:nth-child(4) {
+    background-image: url(../images/service-4.jpg);
+}
+
+.service__item:nth-child(5) {
+    background-image: url(../images/service-5.jpg);
+}
+
+.service__item:nth-child(6) {
+    background-image: url(../images/service-6.jpg);
+}
+
+.service__wrap {
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.service__zoom {
+    height: 54px;
+    width: 54px;
+    background-color: #c32328;
+    position: absolute;
+    left: 50%;
+    top: 37%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service__zoom-logo {
+    height: 35%;
+}
+
+.service__button {
+    width: 100%;
+}
+
+.service__link {
+    text-decoration: none;
+    font-family: 'Open Sans bold';
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
+    padding: 35px 0 35px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
