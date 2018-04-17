@@ -10,13 +10,32 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    @include tablets {
+        height: initial;
+    }
 }
 
 .header__wrap {
-    width: 1170px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
+    max-width: 940px;
+
+    @include desktop {
+        max-width: 1140px;
+    }
+
+    @include tablets-l {
+        max-width: 95%;
+    }
+
+    @include tablets {
+        max-width: 90%;
+        flex-direction: column;
+        justify-content: center;    
+    }
 }
 
 .header__text {
@@ -25,6 +44,17 @@
     color: #fff;
     width: 50%;
     padding-left: 15px;
+
+    @include tablets-l {
+        padding-left: 0;
+        font-size: 13px;
+    }
+    
+    @include tablets {
+        width: 100%; 
+        padding: 10px 0; 
+        text-align: center;  
+    }
 }
 
 .header__contacts {
@@ -32,16 +62,44 @@
     font-size: 14px;
     color: #fff;
     width: 50%;
+
+    @include tablets-l {
+        font-size: 13px;
+    }
+
+    @include tablets {
+        width: 100%;   
+        padding: 0 0 10px 0; 
+    }
 }
 
 .contacts {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+
+    @include tablets {
+        justify-content: center;    
+    }
+
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .contacts__item {
     padding-right: 15px;
+
+    @include tablets-l {
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    @include phones {
+        padding-right: 0;
+    }
 }
 
 .header__main {
@@ -50,10 +108,19 @@
     display: flex;
     justify-content: center;
     position: relative;
+
+    @include tablets {
+        height: 90px;
+        align-items: center;    
+    }
 }
 
 .header__logo {
     padding-top: 20px;
+
+    @include tablets {
+        padding-top: 0;    
+    }
 }
 
 .menu {
@@ -61,6 +128,21 @@
     bottom: -26px;
     box-shadow: 0 0 6px rgba(0,0,0,0.5);
     z-index: 10;
+    width: 100%;
+    max-width: 940px;
+    border-radius: 5px;
+
+    @include desktop {
+        max-width: 1140px;
+    }
+
+    @include tablets-l {
+        max-width: 768px;
+    }
+
+    @include tablets {
+        display: none;    
+    }
 }
 
 .menu__list {
@@ -72,6 +154,16 @@
     background-color: #c32328;
     display: flex;
     flex-grow: 1;
+
+    &:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    &:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
 }
 
 .menu__link {
@@ -79,18 +171,35 @@
     font-size: 13px;
     color: #fff;
     text-decoration: none;
-    padding: 18px 50px;
+    padding: 15px 31px;
     transition: .2s;
 
     &:hover {
         color: #000;
     }
+
+    @include desktop {
+        padding: 18px 42px;
+    }
+
+    @include tablets-l {
+        font-size: 12px;
+        padding: 14px 20px;
+    }
 }
 
 .slider {
-    height: 60%;
+    height: 55%;
     width: 100%;
     max-width: 100%;
+    
+    @include desktop {
+        height: 60%;
+    }
+
+    @include tablets-l {
+        height: 50%;
+    }
 }
 
 .slider__content {
@@ -135,12 +244,33 @@
 .slider__desc {
     text-align: center;
     width: 70%;
+
+    @include phones {
+        width: 100%;
+    }
 }
 
 .slider__title {
     font-family: 'Open Sans bold';
-    font-size: 36px;
+    font-size: 34px;
     color: #fff;
+
+    @include desktop {
+        font-size: 36px;
+    }
+
+    @include tablets-l {
+        font-size: 31px;
+    }
+
+    @include tablets {
+        font-size: 29px;    
+    }
+
+    @include phones {
+        font-size: 24px;
+        margin: 0;
+    }
 }
 
 .slider__text {
@@ -148,6 +278,16 @@
     font-size: 16px;
     color: #fff;
     padding-bottom: 34px;
+
+    @include tablets-l {
+        font-size: 14px;
+    }
+
+    @include phones {
+        font-size: 13px;
+        width: 70%;
+        margin: 0 auto;
+    }
 }
 
 .button__link {
@@ -156,11 +296,25 @@
     font-size: 16px;
     color: #fff;
     background-color: #c32328;
-    padding: 18px 30px;
+    padding: 15px 30px;
+    border-radius: 5px;
 
     &:hover {
         color: #000;
         transition: .2s;
+    }
+
+    @include desktop {
+        padding: 18px 30px;
+    }
+
+    @include tablets-l {
+        font-size: 13px;
+        padding: 13px 28px;
+    }
+
+    @include tablets {
+        padding: 11px 26px;    
     }
 }
 
@@ -199,10 +353,27 @@
             transition: .2s;
         }
     }
+
+    @include phones {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.controls--footer {
+    bottom: 70%;
 }
 
 .slider__controls-prev {
     left: 15px;
+
+    @include desktop {
+        left: 60px;
+    }
+
+    @include phones {
+        left: 5px;
+    }
 }
 
 .controls__triangle-prev {
@@ -212,10 +383,22 @@
     border-left: 3px solid #fff;
     transform: rotate(-45deg);
     margin: 14px;
+
+    @include phones {
+        margin: 10px;
+    }
 }
 
 .slider__controls-next {
     right: 15px;
+
+    @include desktop {
+        right: 60px;
+    }
+
+    @include phones {
+        right: 5px;
+    }
 }
 
 .controls__triangle-next {
@@ -225,28 +408,71 @@
     border-left: 3px solid #fff;
     transform: rotate(135deg);
     margin: 12px;
+
+    @include phones {
+        margin: 8px;
+    }
 }
 
 .hero-desc {
-    height: 27%;
+    height: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include tablets-l {
+        height: 30%;
+    }
+
+    @include phones {
+        height: 23%;
+    }
 }
 
 .hero-desc__title {
     font-family: 'Open Sans bold';
-    font-size: 36px;
+    font-size: 34px;
     color: #000;
     margin: 0;
     padding-top: 20px;
+
+    @include desktop {
+        font-size: 36px;
+    }
+
+    @include tablets-l {
+        font-size: 31px;
+    }
+
+    @include tablets {
+        font-size: 29px;    
+    }
+
+    @include phones {
+        font-size: 27px;
+        text-align: center;
+    }
 }
 
 .hero-desc__text {
     font-family: 'Open Sans reg';
     font-size: 16px;
     color: #000;
-    width: 55%;
+    width: 80%;
+    max-width: 940px;
     text-align: center;
+
+    @include desktop {
+        width: 55%;
+    }
+
+    @include tablets-l {
+        font-size: 14px;
+    }
+
+    @include phones {
+        font-size: 13px;
+        width: 95%;overflow: hidden;
+    }
 }
