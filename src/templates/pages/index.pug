@@ -19,7 +19,10 @@ block content
                 .header__main
                     .header__logo
                         a.logo(href="#"): img.logo__img(src="./assets/images/logo.png")
-                    include ../common/menu.pug 
+                    include ../common/menu.pug
+                    button(type="button").hamburger#openFull
+                        .hamburger__menu
+                    include ../common/tablets-menu.pug 
             .slider.wrap#slides
                 .slider__content.b-carousel.js-carousel
                     ul.slider__list.b-carousel__wrap.js-carousel__wrap
