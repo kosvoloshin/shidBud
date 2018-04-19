@@ -1,22 +1,45 @@
-const left = document.querySelector("#left");
-const right = document.querySelector("#right");
-const items = document.querySelector("#items");
 
-const minRight = 0;
-const maxRight = 16.6;
-const step = 16.6;
-let currentRight = 0;
+var leftArrow = document.querySelector('#left');
+var rightArrow = document.querySelector('#right');
+var sliderList = document.querySelector('.partners__list');
+var sliderContainer = document.querySelector('.partners');
+var size = parseInt(getComputedStyle(sliderContainer).width);
+var start = 3;
 
-right.addEventListener("click", function() {
-  if (currentRight < maxRight) {
-    currentRight += step;
-    items.style.right = currentRight + "%";
-  }
-});
+leftArrow.addEventListener('click', function (e) {
+    e.preventDefault();
+    var currentLeft = (parseInt(getComputedStyle(sliderList).left));
+ 
+    if (start > 1 && currentLeft % size == 0) {        
+      sliderList.style.left = currentLeft + size + 'px';
+      start--;      
+      
+    } else if (currentLeft % size == 0) {
+      sliderList.style.left = currentLeft - 5 * size + 'px';
+      start = 6;      
+    }
+ })
 
-left.addEventListener("click", function() {
-  if (currentRight > minRight) {
-    currentRight -= step;
-    items.style.right = currentRight + "%";
-  }
+rightArrow.addEventListener('click', function (e) {
+    e.preventDefault();
+    var currentLeft = (parseInt(getComputedStyle(sliderList).left));
+
+    if (start < 6 && currentLeft % size == 0) {
+
+        sliderList.style.left = currentLeft - size + 'px';
+        start++;
+    
+    } else if (currentLeft % size == 0) {
+      sliderList.style.left = 0 + 'px';
+      start = 1;     
+    }
+})
+
+
+window.addEventListener('resize', function() {  
+  size = parseInt(getComputedStyle(sliderContainer).width); 
+  // console.log("size: " + size);
+  // console.log("start: " + start);
+  // console.log(-size * start);
+  sliderList.style.left = -size * (start-1) + 'px';
 });

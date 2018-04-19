@@ -15,6 +15,11 @@
         height: 160%;
     }
 
+    @include tablets {
+        height: 130%;
+        max-height: initial;
+    }
+
     @include phones {
         height: 200%;
     }
@@ -64,6 +69,16 @@
         padding-bottom: 30px;
     }
 
+    @include tablets {
+        padding-bottom: 15px;
+        border-bottom: 2px solid #000;
+        padding-top: 15px;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
     @include phones {
         flex-direction: column;
     }
@@ -86,6 +101,7 @@
 
     @include phones {
         width: 100%;
+        height: 60%;
     }
 }
 
@@ -124,12 +140,19 @@
     padding-left: 10px;
     padding-right: 10px;
 
+    @include tablets-l {
+        justify-content: initial;
+    }
+
     @include tablets {
         width: 50%;    
+        justify-content: initial;
     }
 
     @include phones {
         width: 100%;
+        height: 40%;
+        justify-content: initial;
     }
 }
 
@@ -146,6 +169,11 @@
     @include tablets {
         font-size: 14px;    
     }
+
+    @include phones {
+        padding-bottom: 10px;
+        text-align: center;
+    }
 }
 
 .news-desc__text {
@@ -156,10 +184,15 @@
 
     @include tablets-l {
         font-size: 14px;
+        padding-bottom: 10px;
     }
 
     @include tablets {
         font-size: 13px;    
+    }
+
+    @include phones {
+        display: none;
     }
 }
 

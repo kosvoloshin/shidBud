@@ -1,8 +1,25 @@
+.slider-wrap {
+    overflow: hidden;
+    width: 975px;
+    margin: 0 auto;
+
+    @include laptop {
+        width: 585px;
+    }
+
+    @include tablets {
+        width: 330px;
+    }
+
+    @include phones {
+        width: 210px;
+    }
+}
+
 .partners {
     height: 270px;
-    width: 90%;
+    width: 195px;
     display: flex;
-    overflow: hidden;
     margin: 0 auto;
 
     @include desktop {
@@ -12,28 +29,61 @@
     @include tablets-l {
         height: 230px;
     }
+
+    @include tablets {
+        width: 110px;
+    }
+
+    @include phones {
+        width: 210px;
+    }
 }
 
 .partners__list {
     height: 90%;
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
     width: 100%;
-    will-change: right;
-    transition: right 0.3s;
     position: relative;
+    left: -390px;
+    transition: left 0.4s;
+
+    @include tablets {
+        left: -220px;
+    }
+
+    @include phones {
+        width: 420px;
+    }
 }
 
 .partners__item {
     list-style: none;
-    margin-right: 30px;
-    //width: 16.6%;
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 165px;
 
     &:last-child {
         margin-right: 0;
+    }
+
+    @include tablets {
+        width: 80px;
+    }
+
+    @include phones {
+        width: 180px;
+    }
+}
+
+.partners__image {
+    @include tablets {
+        width: 80px;
+    }
+
+    @include phones {
+        width: 180px;
     }
 }
 

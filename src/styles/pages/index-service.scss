@@ -35,6 +35,7 @@
     @include tablets-l {
         max-width: initial;
         width: 80%;
+        height: 80%;
     }
 
     @include tablets {
@@ -84,8 +85,8 @@
     }
 
     @include phones {
-        width: 100%;
-        height: 50%;
+        width: 50%;
+        height: 33.3%;
     }
 }
 
@@ -103,34 +104,18 @@
 
 .service__item:nth-child(3) {
     background-image: url(../images/service-3.jpg);
-
-    @include phones {
-        display: none;
-    }
 }
 
 .service__item:nth-child(4) {
     background-image: url(../images/service-4.jpg);
-
-    @include phones {
-        display: none;
-    }
 }
 
 .service__item:nth-child(5) {
     background-image: url(../images/service-5.jpg);
-
-    @include phones {
-        display: none;
-    }
 }
 
 .service__item:nth-child(6) {
     background-image: url(../images/service-6.jpg);
-
-    @include phones {
-        display: none;
-    }
 }
 
 .service__wrap {
@@ -181,5 +166,9 @@
     @include tablets-l {
         font-size: 12px;
         padding: 20px 0 20px 0;
+    }
+
+    @include phones {
+        font-size: 8px;
     }
 }

@@ -1,5 +1,17 @@
 .hero {
     height: 120%;
+
+    @include tablets-l {
+        height: initial;
+    }
+
+    @include tablets {
+        height: initial;
+    }
+
+    @include phones {
+        height: initial;
+    }
 }
 
 .header__top {
@@ -284,7 +296,7 @@
     height: 0;
     transition: height 0.7s;
     position: absolute;
-    top: 100%;
+    top: 80%;
     z-index: 15;
     width: 100%;
     overflow: hidden;
@@ -322,13 +334,14 @@
     height: 55%;
     width: 100%;
     max-width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
     
     @include desktop {
         height: 60%;
     }
 
     @include tablets-l {
-        height: 50%;
+        height: 40%;
     }
 }
 
@@ -375,8 +388,17 @@
     text-align: center;
     width: 70%;
 
+    @include tablets-l {
+        padding: 10px 0 20px 0;
+    }
+
+    @include tablets {
+        padding: 10px 0 20px 0;
+    }
+
     @include phones {
         width: 100%;
+        padding: 10px 0 20px 0;
     }
 }
 
@@ -399,7 +421,8 @@
 
     @include phones {
         font-size: 24px;
-        margin: 0;
+        margin: 0 auto;
+        width: 95%;
     }
 }
 
@@ -552,11 +575,19 @@
     align-items: center;
 
     @include tablets-l {
-        height: 30%;
+        //height: 30%;
+        height: initial;
+        padding-bottom: 15px;
+    }
+
+    @include tablets {
+        height: initial;
+        padding-bottom: 15px;
     }
 
     @include phones {
-        height: 23%;
+      height: initial;
+      padding-bottom: 15px;
     }
 }
 
