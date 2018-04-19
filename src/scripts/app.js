@@ -2,6 +2,8 @@ const sliderInit = require('./common/slider');
 
 sliderInit.init(); // инициализируем слайдер
 
-require('./common/slider-second');
+const slider = require('./common/slider-second');
+
+slider(); // инициализируем слайдер2
 
 require('./common/hamburger');
