@@ -5,9 +5,7 @@ block variables
 
 block content
     .wrapper
-        h1.visuallyhidden Главная 
-        section.section.hero
-            header.header
+        header.header
                 .header__top
                     .header__wrap
                         .header__text Комплексные решения в сфере строительных услуг
@@ -22,7 +20,9 @@ block content
                     include ../common/menu.pug
                     button(type="button").hamburger#openFull
                         .hamburger__menu
-                    include ../common/tablets-menu.pug 
+                    //include ../common/tablets-menu.pug
+        section.section.hero
+            h1.visuallyhidden Hero
             .slider.wrap#slides
                 .slider__content.b-carousel.js-carousel
                     ul.slider__list.b-carousel__wrap.js-carousel__wrap
@@ -52,11 +52,12 @@ block content
                             .controls__triangle-prev
                         button.controls.slider__controls-next.b-carousel__next.js-carousel__next(type="button")
                             .controls__triangle-next
-            .hero-desc
-                h2.hero-desc__title Оказываемые Услуги
-                .hero-desc__text 
-                    p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и реализации дальнейших направлений развития. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации модели развития.
         section.section.service
+            h1.visuallyhidden Service
+            .service__desc
+                h2.service__title Оказываемые Услуги
+                .service__text 
+                    p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и реализации дальнейших направлений развития. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации модели развития.
             .service__content
                 ul.service__list
                     li.service__item
@@ -96,6 +97,7 @@ block content
                                     img.service__zoom-logo(src="./assets/images/zoom.png")
                         .service__button: a.service__link(href="#") УКЛАДКА ТРОТУАРНОЙ ПЛИТКИ
         section.section.news
+            h1.visuallyhidden News
             h2.news__title Новости
             ul.news__list
                 li.news__item
@@ -127,9 +129,10 @@ block content
                             p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и...  
                         .news-desc__btn: a.news-desc__btn-link(href="#") ПОДРОБНЕЕ
         section.section.contacts-footer
+            h1.visuallyhidden Partners
             .slider-wrap
                 .partners
-                    ul.partners__list#items
+                    ul.partners__list#lightSlider
                         li.partners__item: img.partners__image(src="./assets/images/intel.png")
                         li.partners__item: img.partners__image(src="./assets/images/acer.png")
                         li.partners__item: img.partners__image(src="./assets/images/lg.png")

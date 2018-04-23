@@ -1,60 +1,113 @@
 .service {
-    height: 100%;
-    max-height: 860px;
     width: 100%;
     background-image: url(../images/bg-service.png);
     background-repeat: no-repeat;
     background-position: center 100%;
     background-size: cover;
     z-index: 1;
+}
 
-    @include tablets-l {
-        height: 100%;
-    }
+.service__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 75px;
+    padding-bottom: 60px;
 
     @include tablets {
-        height: 120%;    
-    }
-
-    @include phones {
-        height: 100%;
+        padding-top: 35px;
+        padding-bottom: 30px;
     }
 }
 
-.service__content {
-    height: 85%;
-    margin: 0 auto;
-    display: flex;
+.service__title {
+    font-family: 'Open Sans bold';
+    font-size: 34px;
+    color: #000;
+    margin: 0;
+    padding-bottom: 40px;
+
+    @include desktop {
+        font-size: 36px;
+    }
+
+    @include tablets-l {
+        font-size: 31px;
+    }
+
+    @include tablets {
+        font-size: 29px;    
+    }
+
+    @include phones {
+        font-size: 27px;
+        text-align: center;
+    }
+}
+
+.service__text {
+    font-family: 'Open Sans reg';
+    font-size: 16px;
+    color: #000;
+    width: 80%;
     max-width: 940px;
-    width: 100%;
+    text-align: center;
 
     @include desktop {
         max-width: 1140px;
     }
 
     @include tablets-l {
-        max-width: initial;
-        width: 80%;
-        height: 80%;
+        font-size: 14px;
     }
 
-    @include tablets {
-        height: 90%;
-        width: 90%;    
+    @include phones {
+        font-size: 13px;
+        width: 95%;overflow: hidden;
+    }
+}
+
+.service__content {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+
+    @include desktop {
+        max-width: 1140px;
     }
 }
 
 .service__list {
-    height: 100%;
-    width: 100%;
     display: flex;
     flex-flow: row wrap;
-    align-content: stretch;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    box-shadow: 0 0 7px rgba(0,0,0,0.3);
+    width: 945px;
+
+    @include desktop {
+        width: 1140px;
+    }
+
+    @include tablets-l {
+        width: 100%;
+        max-width: 750px;
+    }
+
+    @include tablets {
+        max-width: 420px;
+    }
+
+    @include phones {
+        max-width: 280px;
+    }
 }
 
 .service__item {
-    width: 33.3%;
-    height: 50%;
+    width: 315px;
+    height: 315px;
     background-image: url(../images/service-1.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -79,14 +132,24 @@
         }
     }
 
+    @include desktop {
+        width: 380px;
+        height: 380px;
+    }
+
+    @include tablets-l {
+        height: 250px;
+        width: 250px;
+    }
+
     @include tablets {
-        width: 50%;
-        height: 33.3%;    
+        width: 210px;
+        height: 210px;    
     }
 
     @include phones {
-        width: 50%;
-        height: 33.3%;
+        width: 140px;
+        height: 140px;
     }
 }
 
@@ -135,7 +198,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
+
+    @include phones {
+        height: 30px;
+        width: 30px;
+    }
 }
 
 .service__zoom-logo {
@@ -170,5 +237,6 @@
 
     @include phones {
         font-size: 8px;
+        padding: 13px 0;
     }
 }

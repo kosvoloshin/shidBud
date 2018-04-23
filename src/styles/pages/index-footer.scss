@@ -1,4 +1,4 @@
-.slider-wrap {
+/*.slider-wrap {
     overflow: hidden;
     width: 975px;
     margin: 0 auto;
@@ -37,7 +37,7 @@
     @include phones {
         width: 210px;
     }
-}
+}*/
 
 .partners__list {
     height: 90%;
@@ -60,11 +60,11 @@
 
 .partners__item {
     list-style: none;
-    margin-right: 15px;
-    margin-left: 15px;
-    width: 165px;
+    //margin-right: 15px;
+    //margin-left: 15px;
+    //width: 165px;
 
-    &:last-child {
+   /*&:last-child {
         margin-right: 0;
     }
 
@@ -74,9 +74,9 @@
 
     @include phones {
         width: 180px;
-    }
+    }*/
 }
-
+/*
 .partners__image {
     @include tablets {
         width: 80px;
@@ -85,7 +85,7 @@
     @include phones {
         width: 180px;
     }
-}
+}*/
 
 .footer {
     height: 270px;

@@ -1,22 +1,5 @@
-.hero {
-    height: 120%;
-
-    @include tablets-l {
-        height: initial;
-    }
-
-    @include tablets {
-        height: initial;
-    }
-
-    @include phones {
-        height: initial;
-    }
-}
-
 .header__top {
     background-color: #000;
-    height: 38px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -34,6 +17,7 @@
     align-items: center;
     width: 100%;
     max-width: 940px;
+    padding: 10px 0;
 
     @include desktop {
         max-width: 1140px;
@@ -55,7 +39,6 @@
     font-size: 14px;
     color: #fff;
     width: 50%;
-    padding-left: 15px;
 
     @include tablets-l {
         padding-left: 0;
@@ -103,6 +86,10 @@
 .contacts__item {
     padding-right: 15px;
 
+    &:last-child {
+        padding-right: 0;
+    }
+
     @include tablets-l {
         &:last-child {
             padding-right: 0;
@@ -143,7 +130,6 @@
     z-index: 10;
     width: 100%;
     max-width: 940px;
-    border-radius: 5px;
 
     @include desktop {
         max-width: 1140px;
@@ -154,13 +140,30 @@
     }
 
     @include tablets {
-        display: none;    
+        height: 0;
+        transition: height 0.7s;
+        position: absolute;
+        top: 80%;
+        z-index: 15;
+        width: 100%;
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: none;
     }
 }
 
 .menu__list {
     display: flex;
     flex-direction: row;
+
+    @include tablets {
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
 }
 
 .menu__item {
@@ -168,14 +171,14 @@
     display: flex;
     flex-grow: 1;
 
-    &:first-child {
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-    }
+    @include tablets {
+        background-color: initial;
 
-    &:last-child {
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
+        &:hover {
+            .menu__link {
+                border-bottom: 2px solid #000;
+            }
+        }
     }
 }
 
@@ -198,6 +201,15 @@
     @include tablets-l {
         font-size: 12px;
         padding: 14px 20px;
+    }
+
+    @include tablets {
+        text-decoration: none;
+        font-family: 'Open Sans bold';
+        font-size: 13px;
+        color: #000;
+        transition: .2s;
+        border-bottom: 2px solid transparent;
     }
 }
 
@@ -292,56 +304,19 @@
     }
 }
 
-.tablets-menu {
-    height: 0;
-    transition: height 0.7s;
-    position: absolute;
-    top: 80%;
-    z-index: 15;
-    width: 100%;
-    overflow: hidden;
-    background-color: #fff;
-}
-
-.tablets-menu__list {
-    width: 95%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.tablets-menu__item {
-    padding: 12px 31px;
-
-    &:hover {
-        .tablets-menu__link {
-            border-bottom: 2px solid #000;
-        }
-    }
-}
-
-.tablets-menu__link {
-    text-decoration: none;
-    font-family: 'Open Sans bold';
-    font-size: 13px;
-    color: #000;
-    transition: .2s;
-    border-bottom: 2px solid transparent;
-}
-
 .slider {
-    height: 55%;
+    height: 474px;
     width: 100%;
     max-width: 100%;
     box-shadow: 0 0 10px rgba(0,0,0,0.9);
+    margin-bottom: 10px;
     
     @include desktop {
-        height: 60%;
+        height: 574px;
     }
 
-    @include tablets-l {
-        height: 40%;
+    @include tablets {
+        height: 400px;
     }
 }
 
@@ -386,14 +361,21 @@
 
 .slider__desc {
     text-align: center;
-    width: 70%;
+    width: 100%;
+    max-width: 940px;
+
+    @include desktop {
+        max-width: 1140px;
+    }
 
     @include tablets-l {
         padding: 10px 0 20px 0;
+        max-width: 750px;
     }
 
     @include tablets {
         padding: 10px 0 20px 0;
+        max-width: 330px;
     }
 
     @include phones {
@@ -434,6 +416,8 @@
 
     @include tablets-l {
         font-size: 14px;
+        max-width: 630px;
+        margin: 0 auto;
     }
 
     @include phones {
@@ -450,7 +434,6 @@
     color: #fff;
     background-color: #c32328;
     padding: 15px 30px;
-    border-radius: 5px;
 
     &:hover {
         color: #000;
@@ -564,76 +547,5 @@
 
     @include phones {
         margin: 8px;
-    }
-}
-
-.hero-desc {
-    height: 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @include tablets-l {
-        //height: 30%;
-        height: initial;
-        padding-bottom: 15px;
-    }
-
-    @include tablets {
-        height: initial;
-        padding-bottom: 15px;
-    }
-
-    @include phones {
-      height: initial;
-      padding-bottom: 15px;
-    }
-}
-
-.hero-desc__title {
-    font-family: 'Open Sans bold';
-    font-size: 34px;
-    color: #000;
-    margin: 0;
-    padding-top: 20px;
-
-    @include desktop {
-        font-size: 36px;
-    }
-
-    @include tablets-l {
-        font-size: 31px;
-    }
-
-    @include tablets {
-        font-size: 29px;    
-    }
-
-    @include phones {
-        font-size: 27px;
-        text-align: center;
-    }
-}
-
-.hero-desc__text {
-    font-family: 'Open Sans reg';
-    font-size: 16px;
-    color: #000;
-    width: 80%;
-    max-width: 940px;
-    text-align: center;
-
-    @include desktop {
-        width: 55%;
-    }
-
-    @include tablets-l {
-        font-size: 14px;
-    }
-
-    @include phones {
-        font-size: 13px;
-        width: 95%;overflow: hidden;
     }
 }

@@ -1,28 +1,9 @@
 .news {
-    height: 150%;
-    max-height: 1354px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 0 20px rgba(0,0,0,0.6);
-    
-    @include desktop {
-        height: 120%;
-    }
-
-    @include tablets-l {
-        height: 160%;
-    }
-
-    @include tablets {
-        height: 130%;
-        max-height: initial;
-    }
-
-    @include phones {
-        height: 200%;
-    }
 }
 
 .news__title {
@@ -30,7 +11,13 @@
     font-family: 'Open Sans bold';
     font-size: 30px;
     color: #000;
-    padding-top: 25px;
+    padding-top: 100px;
+    padding-bottom: 67px;
+
+    @include tablets {
+        padding-top: 50px;
+        padding-bottom: 34px;
+    }
 
     @include phones {
         padding-top: 15px;
@@ -40,7 +27,6 @@
 .news__list {
     display: flex;
     flex-direction: column;
-    height: 95%;
     max-width: 940px;
     width: 100%;
 
@@ -49,24 +35,35 @@
     }
 
     @include tablets-l {
-        max-width: initial;
-        width: 90%;
+        max-width: 750px;
+    }
+
+    @include tablets {
+        max-width: 420px;
     }
 
     @include phones {
-        height: 95%;
+        max-width: 280px;
     }
 }
 
 .news__item {
     width: 100%;
-    height: 25%;
     display: flex;
     flex-direction: row;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
+
+    &:last-child {
+        padding-bottom: 130px;
+
+        @include tablets {
+            padding-bottom: 70px;
+        }
+    }
 
     @include tablets-l {
         padding-bottom: 30px;
+        justify-content: center;
     }
 
     @include tablets {
@@ -86,22 +83,31 @@
 
 .news__item--right {
     justify-content: flex-end;
+
+    @include tablets-l {
+        justify-content: center;
+    }
 }
 
 .news__image {
-    height: 100%;
-    width: 33.3%;
+    height: 200px;
+    width: 300px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+
+    @include desktop {
+        height: 214px;
+        width: 357px;
+    }
 
     @include tablets {
         width: 50%;    
     }
 
     @include phones {
-        width: 100%;
-        height: 60%;
+        width: 280px;
+        height: 167px;
     }
 }
 
@@ -113,10 +119,10 @@
     background-image: url(../images/news-2.jpg);
     order: 10;
 
-    @include phones {
+    @include tablets-l {
         order: initial;
     }
-}
+}   
 
 .news__image-three {
     background-image: url(../images/news-3.jpg);
@@ -126,27 +132,26 @@
     background-image: url(../images/news-4.jpg);
     order: 10;
 
-    @include phones {
+    @include tablets-l {
         order: initial;
     }
 }
 
 .news-desc {
-    height: 100%;
-    width: 33.3%;
+    width: 340px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 20px;
 
-    @include tablets-l {
-        justify-content: initial;
+    @include desktop {
+        width: 407px;
+        padding: 0 30px;
     }
 
     @include tablets {
         width: 50%;    
-        justify-content: initial;
+        padding: 0 0 0 20px;
     }
 
     @include phones {
@@ -223,7 +228,6 @@
     color: #fff;
     background-color: #c32328;
     padding: 14px 32px;
-    border-radius: 5px;
 
     @include tablets-l {
         font-size: 12px;

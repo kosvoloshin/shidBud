@@ -4,9 +4,7 @@ var i;
 
 hamburger.addEventListener('click', function(e) {
 	
-	var content = document.querySelector(".tablets-menu")  
-    //var element = document.getElementById("menu");
-    //element.classList.toggle("active")
+	var content = document.querySelector(".menu")  
     hamburger.classList.toggle("active")
 
     if (content.style.height) {

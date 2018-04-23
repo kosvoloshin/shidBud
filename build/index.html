@@ -13,50 +13,40 @@
   </head>
   <body>
     <div class="wrapper">
-      <h1 class="visuallyhidden">Главная </h1>
+      <header class="header">
+        <div class="header__top">
+          <div class="header__wrap">
+            <div class="header__text">Комплексные решения в сфере строительных услуг</div>
+            <div class="header__contacts">
+              <ul class="contacts">
+                <li class="contacts__item">info@carral.com</li>
+                <li class="contacts__item">+00(123)456 78 90</li>
+                <li class="contacts__item">+00(123)456 78 90</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header__main">
+          <div class="header__logo"><a class="logo" href="#"><img class="logo__img" src="./assets/images/logo.png"></a></div>
+          <div class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link" href="#">ГЛАВНАЯ</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">О КОМПАНИИ</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">УСЛУГИ</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">ОБЪЕКТЫ</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">НОВОСТИ</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">ДОКУМЕНТЫ</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">КОНТАКТЫ</a></li>
+            </ul>
+          </div>
+          <button class="hamburger" type="button" id="openFull">
+            <div class="hamburger__menu"></div>
+          </button>
+          <!--include ../common/tablets-menu.pug-->
+        </div>
+      </header>
       <section class="section hero">
-        <header class="header">
-          <div class="header__top">
-            <div class="header__wrap">
-              <div class="header__text">Комплексные решения в сфере строительных услуг</div>
-              <div class="header__contacts">
-                <ul class="contacts">
-                  <li class="contacts__item">info@carral.com</li>
-                  <li class="contacts__item">+00(123)456 78 90</li>
-                  <li class="contacts__item">+00(123)456 78 90</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="header__main">
-            <div class="header__logo"><a class="logo" href="#"><img class="logo__img" src="./assets/images/logo.png"></a></div>
-            <div class="menu">
-              <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="#">ГЛАВНАЯ</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">О КОМПАНИИ</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">УСЛУГИ</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">ОБЪЕКТЫ</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">НОВОСТИ</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">ДОКУМЕНТЫ</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">КОНТАКТЫ</a></li>
-              </ul>
-            </div>
-            <button class="hamburger" type="button" id="openFull">
-              <div class="hamburger__menu"></div>
-            </button>
-            <div class="tablets-menu">
-              <ul class="tablets-menu__list">
-                <li class="tablets-menu__item"><a class="tablets-menu__link" href="#">ГЛАВНАЯ</a></li>
-                <li class="tablets-menu__item"><a class="tablets-menu__link" href="#">О КОМПАНИИ</a></li>
-                <li class="tablets-menu__item"><a class="tablets-menu__link" href="#">УСЛУГИ</a></li>
-                <li class="tablets-menu__item"><a class="tablets-menu__link" href="#">ОБЪЕКТЫ</a></li>
-                <li class="tablets-menu__item"><a class="tablets-menu__link" href="#">НОВОСТИ</a></li>
-                <li class="tablets-menu__item"><a class="tablets-menu__link" href="#">ДОКУМЕНТЫ</a></li>
-                <li class="tablets-menu__item"><a class="tablets-menu__link" href="#">КОНТАКТЫ</a></li>
-              </ul>
-            </div>
-          </div>
-        </header>
+        <h1 class="visuallyhidden">Hero</h1>
         <div class="slider wrap" id="slides">
           <div class="slider__content b-carousel js-carousel">
             <ul class="slider__list b-carousel__wrap js-carousel__wrap">
@@ -104,14 +94,15 @@
             </div>
           </div>
         </div>
-        <div class="hero-desc">
-          <h2 class="hero-desc__title">Оказываемые Услуги</h2>
-          <div class="hero-desc__text"> 
+      </section>
+      <section class="section service">
+        <h1 class="visuallyhidden">Service</h1>
+        <div class="service__desc">
+          <h2 class="service__title">Оказываемые Услуги</h2>
+          <div class="service__text"> 
             <p>Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и реализации дальнейших направлений развития. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации модели развития.</p>
           </div>
         </div>
-      </section>
-      <section class="section service">
         <div class="service__content">
           <ul class="service__list">
             <li class="service__item">
@@ -166,6 +157,7 @@
         </div>
       </section>
       <section class="section news">
+        <h1 class="visuallyhidden">News</h1>
         <h2 class="news__title">Новости</h2>
         <ul class="news__list">
           <li class="news__item">
@@ -211,9 +203,10 @@
         </ul>
       </section>
       <section class="section contacts-footer">
+        <h1 class="visuallyhidden">Partners</h1>
         <div class="slider-wrap">
           <div class="partners">
-            <ul class="partners__list" id="items">
+            <ul class="partners__list" id="lightSlider">
               <li class="partners__item"><img class="partners__image" src="./assets/images/intel.png"></li>
               <li class="partners__item"><img class="partners__image" src="./assets/images/acer.png"></li>
               <li class="partners__item"><img class="partners__image" src="./assets/images/lg.png"></li>
