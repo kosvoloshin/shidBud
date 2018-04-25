@@ -1,7 +1,7 @@
 block variables
 
 doctype html
-html
+html(lang="en")
     head
         meta(charset="utf-8")
         title #{title}
@@ -12,6 +12,7 @@ html
         link(rel='stylesheet' href='./assets/styles/app.min.css')
         link(rel="icon" type="image/x-icon" href="./assets/images/favicon-carral.ico")
         script(src='./assets/scripts/bundle.js' defer)
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
     body
         block content
         
