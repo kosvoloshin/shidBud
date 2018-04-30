@@ -32,6 +32,10 @@ const paths = {
     scripts: {
         src: 'src/scripts/**/*.js',
         dest: 'build/assets/scripts/'
+    },
+    fonts: {
+        src: 'src/fonts/**/*.*',
+        dest: 'build/assets/fonts/'
     }
 }
 
@@ -48,7 +52,7 @@ function styles() {
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sassGlob())
-        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(sass(/*{outputStyle: 'compressed'}*/))
         .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.styles.dest))
@@ -89,13 +93,20 @@ function images() {
         .pipe(gulp.dest(paths.images.dest));
 }
 
+// просто переносим шрифты
+function fonts() {
+    return gulp.src(paths.fonts.src)
+        .pipe(gulp.dest(paths.fonts.dest));
+}
+
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
+exports.fonts = fonts;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, scripts),
+    gulp.parallel(styles, templates, images, fonts, scripts),
     gulp.parallel(watch, server)
 ));
