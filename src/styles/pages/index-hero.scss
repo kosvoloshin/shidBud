@@ -323,6 +323,10 @@
     @include tablets {
         height: 400px;
     }
+
+    @include phones {
+        height: 335px;
+    }
 }
 
 .slider__content {
