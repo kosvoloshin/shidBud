@@ -107,8 +107,8 @@
     background-size: cover;
 
     @include desktop {
-        height: 214px;
-        width: 357px;
+        height: 227px;
+        width: 380px;
     }
 
     @include tablets {
@@ -155,7 +155,7 @@
     padding: 0 20px;
 
     @include desktop {
-        width: 407px;
+        width: 380px;
         padding: 0 30px;
     }
 
