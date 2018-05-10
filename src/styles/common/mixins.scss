@@ -1,17 +1,17 @@
+@mixin big-desktop {
+    @media screen and (min-width: $big-desktop) {
+        @content;
+    }
+}
+
 @mixin desktop {
-    @media screen and (min-width: $desktop) {
+    @media screen and (max-width: $desktop) {
         @content;
     }
 }
 
 @mixin laptop {
     @media screen and (max-width: $laptop) {
-        @content;
-    }
-}
-
-@mixin tablets-l {
-    @media screen and (max-width: $tablets-l) {
         @content;
     }
 }

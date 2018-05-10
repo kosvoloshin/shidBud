@@ -1,15 +1,14 @@
-header.header
-    .header__top
-        .header__wrap
-            .header__text Комплексные решения в сфере строительных услуг
-            .header__contacts
-                ul.contacts
-                    li.contacts__item info@carral.com
-                    li.contacts__item +00(123)456 78 90
-                    li.contacts__item +00(123)456 78 90
-    .header__main
-        .header__logo
-            a.logo(href="index.html"): img.logo__img(alt="logo" src="./assets/images/logo.png")
-        include ./menu.pug
-        button(type="button").hamburger#openFull
-            .hamburger__menu
+header.header.container
+    .header__row
+        .logo
+            a.logo__link(href="index.html")
+                img.logo__image(src="./assets/images/logo-b.png")
+        .contacts
+            ul.contacts__list
+                li.contacts__item info@shidbud.com
+                li.contacts__item +38 099 789 98 78
+                li.contacts__item +38 093 789 98 78
+                li.contacts__item +38 097 789 98 78
+                li.contacts__item Пн-Пт 09:00 - 17:00
+    .header__row
+        include ../common/menu.pug
