@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header container">
+      <header class="header container" id="top">
         <div class="header__row">
           <div class="logo"><a class="logo__link" href="index.html"><img class="logo__image" src="./assets/images/logo-b.png"></a></div>
           <div class="contacts">
@@ -102,7 +102,8 @@
           swipe: false,
           transition: "slide",
           slideTracker: false,
-          slideOnInterval: false, 
+          slideOnInterval: true,
+          interval: 4000, 
           animateDuration: 500, 
           animationEasing: 'ease', 
           };
@@ -219,7 +220,7 @@
           <h2 class="reviews__title">Отзывы клиентов</h2>
           <ul class="reviews__list">
             <li class="reviews__item">   
-              <div class="reviews__avatar"></div>
+              <div class="reviews__avatar" style="background-image: url('./assets/images/client-1.jpg');"></div>
               <div class="reviews__desk">
                 <div class="reviews__row">
                   <div class="reviews__name">Марина</div>
@@ -231,7 +232,7 @@
               </div>
             </li>
             <li class="reviews__item">   
-              <div class="reviews__avatar"></div>
+              <div class="reviews__avatar" style="background-image: url('./assets/images/client-2.jpg');"></div>
               <div class="reviews__desk">
                 <div class="reviews__row">
                   <div class="reviews__name">Ольга Сергеевна</div>
@@ -243,7 +244,7 @@
               </div>
             </li>
             <li class="reviews__item">   
-              <div class="reviews__avatar"></div>
+              <div class="reviews__avatar" style="background-image: url('./assets/images/client-3.jpg');"></div>
               <div class="reviews__desk">
                 <div class="reviews__row">
                   <div class="reviews__name">Дмитрий Земцов</div>
@@ -255,7 +256,7 @@
               </div>
             </li>
             <li class="reviews__item">   
-              <div class="reviews__avatar"></div>
+              <div class="reviews__avatar" style="background-image: url('./assets/images/client-4.jpg');"></div>
               <div class="reviews__desk">
                 <div class="reviews__row">
                   <div class="reviews__name">Олег</div>
@@ -267,7 +268,7 @@
               </div>
             </li>
             <li class="reviews__item">   
-              <div class="reviews__avatar"></div>
+              <div class="reviews__avatar" style="background-image: url('./assets/images/client-5.jpg');"></div>
               <div class="reviews__desk">
                 <div class="reviews__row">
                   <div class="reviews__name">"Строй сервис"</div>
@@ -279,7 +280,7 @@
               </div>
             </li>
             <li class="reviews__item">   
-              <div class="reviews__avatar"></div>
+              <div class="reviews__avatar" style="background-image: url('./assets/images/client-6.jpg');"></div>
               <div class="reviews__desk">
                 <div class="reviews__row">
                   <div class="reviews__name">Евгений</div>
@@ -291,10 +292,10 @@
               </div>
             </li>
           </ul>
-          <div class="button"><a class="button__link" href="#">показать еще</a></div>
-          <ul class="reviews__list visuallyhidden">
+          <div class="button" id="reviews-btn"><a class="button__link" href="#">показать еще</a></div>
+          <ul class="reviews__list visuallyhidden reviews__list--hidden">
             <li class="reviews__item">   
-              <div class="reviews__avatar"></div>
+              <div class="reviews__avatar" style="background-image: url('./assets/images/client-1.jpg');"></div>
               <div class="reviews__desk">
                 <div class="reviews__row">
                   <div class="reviews__name">Марина</div>
@@ -306,7 +307,7 @@
               </div>
             </li>
             <li class="reviews__item">   
-              <div class="reviews__avatar"></div>
+              <div class="reviews__avatar" style="background-image: url('./assets/images/client-2.jpg');"></div>
               <div class="reviews__desk">
                 <div class="reviews__row">
                   <div class="reviews__name">Марина</div>
@@ -318,7 +319,7 @@
               </div>
             </li>
             <li class="reviews__item">   
-              <div class="reviews__avatar"></div>
+              <div class="reviews__avatar" style="background-image: url('./assets/images/client-3.jpg');"></div>
               <div class="reviews__desk">
                 <div class="reviews__row">
                   <div class="reviews__name">Марина</div>
@@ -330,7 +331,7 @@
               </div>
             </li>
             <li class="reviews__item">   
-              <div class="reviews__avatar"></div>
+              <div class="reviews__avatar" style="background-image: url('./assets/images/client-4.jpg');"></div>
               <div class="reviews__desk">
                 <div class="reviews__row">
                   <div class="reviews__name">Марина</div>
@@ -342,7 +343,7 @@
               </div>
             </li>
             <li class="reviews__item">   
-              <div class="reviews__avatar"></div>
+              <div class="reviews__avatar" style="background-image: url('./assets/images/client-5.jpg');"></div>
               <div class="reviews__desk">
                 <div class="reviews__row">
                   <div class="reviews__name">Марина</div>
@@ -354,7 +355,7 @@
               </div>
             </li>
             <li class="reviews__item">   
-              <div class="reviews__avatar"></div>
+              <div class="reviews__avatar" style="background-image: url('./assets/images/client-6.jpg');"></div>
               <div class="reviews__desk">
                 <div class="reviews__row">
                   <div class="reviews__name">Марина</div>
@@ -371,7 +372,7 @@
       <footer class="footer">
         <div class="container">
           <div class="logo"><a class="logo__link" href="index.html"><img class="logo__image" src="./assets/images/logo-f.png"></a></div>
-          <div class="button"><a class="button__link" href="#"><img class="button__arrow-up" src="./assets/images/arrow-up.png"></a></div>
+          <div class="button button--up"><a class="button__link" href="#top"><img class="button__arrow-up" src="./assets/images/arrow-up.png"></a></div>
         </div>
       </footer>
     </div>

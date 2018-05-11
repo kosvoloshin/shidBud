@@ -50,7 +50,8 @@ block content
                 swipe: false,
                 transition: "slide",
                 slideTracker: false,
-                slideOnInterval: false, 
+                slideOnInterval: true,
+                interval: 4000, 
                 animateDuration: 500, 
                 animationEasing: 'ease', 
                 };
@@ -153,7 +154,7 @@ block content
                 h2.reviews__title Отзывы клиентов
                 ul.reviews__list
                     li.reviews__item    
-                        .reviews__avatar
+                        .reviews__avatar(style="background-image: url('./assets/images/client-1.jpg')")
                         .reviews__desk
                             .reviews__row
                                 .reviews__name Марина
@@ -161,7 +162,7 @@ block content
                             .reviews__row
                                 p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и развитию
                     li.reviews__item    
-                        .reviews__avatar
+                        .reviews__avatar(style="background-image: url('./assets/images/client-2.jpg')")
                         .reviews__desk
                             .reviews__row
                                 .reviews__name Ольга Сергеевна
@@ -169,7 +170,7 @@ block content
                             .reviews__row
                                 p Идейные соображения высшего порядка, а также консультация
                     li.reviews__item    
-                        .reviews__avatar
+                        .reviews__avatar(style="background-image: url('./assets/images/client-3.jpg')")
                         .reviews__desk
                             .reviews__row
                                 .reviews__name Дмитрий Земцов
@@ -177,7 +178,7 @@ block content
                             .reviews__row
                                 p Повседневная практика показывает, что реализация намеченных плановых заданий позволяет оценить значение соответствующий условий активизации. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки дальнейших направлений развития. Задача организации, в особенности же консультация с широким активом представляет собой интересный эксперимент проверки направлений прогрессивного развития.
                     li.reviews__item    
-                        .reviews__avatar
+                        .reviews__avatar(style="background-image: url('./assets/images/client-4.jpg')")
                         .reviews__desk
                             .reviews__row
                                 .reviews__name Олег
@@ -185,7 +186,7 @@ block content
                             .reviews__row
                                 p Таким образом укрепление и развитие структуры способствует подготовки и реализации модели развития.
                     li.reviews__item    
-                        .reviews__avatar
+                        .reviews__avatar(style="background-image: url('./assets/images/client-5.jpg')")
                         .reviews__desk
                             .reviews__row
                                 .reviews__name "Строй сервис"
@@ -193,17 +194,17 @@ block content
                             .reviews__row
                                 p Повседневная практика показывает, что реализация намеченных плановых заданий позволяет оценить значение соответствующий условий активизации. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки дальнейших направлений развития. Задача организации, в особенности же консультация с широким активом представляет собой интересный эксперимент проверки направлений прогрессивного развития.
                     li.reviews__item    
-                        .reviews__avatar
+                        .reviews__avatar(style="background-image: url('./assets/images/client-6.jpg')")
                         .reviews__desk
                             .reviews__row
                                 .reviews__name Евгений
                                 .reviews__date 12 января 2018
                             .reviews__row
                                 p Таким образом укрепление и развитие структуры способствует подготовки и реализации модели развития.
-                .button: a.button__link(href="#") показать еще
-                ul.reviews__list.visuallyhidden
+                .button#reviews-btn: a.button__link(href="#") показать еще
+                ul.reviews__list.visuallyhidden.reviews__list--hidden
                     li.reviews__item    
-                        .reviews__avatar
+                        .reviews__avatar(style="background-image: url('./assets/images/client-1.jpg')")
                         .reviews__desk
                             .reviews__row
                                 .reviews__name Марина
@@ -211,7 +212,7 @@ block content
                             .reviews__row
                                 p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и развитию
                     li.reviews__item    
-                        .reviews__avatar
+                        .reviews__avatar(style="background-image: url('./assets/images/client-2.jpg')")
                         .reviews__desk
                             .reviews__row
                                 .reviews__name Марина
@@ -219,7 +220,7 @@ block content
                             .reviews__row
                                 p Идейные соображения высшего порядка, а также консультация
                     li.reviews__item    
-                        .reviews__avatar
+                        .reviews__avatar(style="background-image: url('./assets/images/client-3.jpg')")
                         .reviews__desk
                             .reviews__row
                                 .reviews__name Марина
@@ -227,7 +228,7 @@ block content
                             .reviews__row
                                 p Повседневная практика показывает, что реализация намеченных плановых заданий позволяет оценить значение соответствующий условий активизации. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки дальнейших направлений развития. Задача организации, в особенности же консультация с широким активом представляет собой интересный эксперимент проверки направлений прогрессивного развития.
                     li.reviews__item    
-                        .reviews__avatar
+                        .reviews__avatar(style="background-image: url('./assets/images/client-4.jpg')")
                         .reviews__desk
                             .reviews__row
                                 .reviews__name Марина
@@ -235,7 +236,7 @@ block content
                             .reviews__row
                                 p Таким образом укрепление и развитие структуры способствует подготовки и реализации модели развития.
                     li.reviews__item    
-                        .reviews__avatar
+                        .reviews__avatar(style="background-image: url('./assets/images/client-5.jpg')")
                         .reviews__desk
                             .reviews__row
                                 .reviews__name Марина
@@ -243,7 +244,7 @@ block content
                             .reviews__row
                                 p Повседневная практика показывает, что реализация намеченных плановых заданий позволяет оценить значение соответствующий условий активизации. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки дальнейших направлений развития. Задача организации, в особенности же консультация с широким активом представляет собой интересный эксперимент проверки направлений прогрессивного развития.
                     li.reviews__item    
-                        .reviews__avatar
+                        .reviews__avatar(style="background-image: url('./assets/images/client-6.jpg')")
                         .reviews__desk
                             .reviews__row
                                 .reviews__name Марина

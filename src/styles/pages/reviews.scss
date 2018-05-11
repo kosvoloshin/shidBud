@@ -1,0 +1,108 @@
+.reviews {
+    padding: 90px 0px 112px 0px;
+
+    .button {
+        margin-top: 80px;
+        margin-right: 30px;
+    }
+}
+
+.reviews__title {
+    margin: 0;
+    font-family: 'Open Sans bold';
+    font-size: 26px;
+    color: #000;
+    position: relative;
+    margin-bottom: 65px;
+
+    &::after {
+        content: "";
+        width: 825px;
+        border-bottom: 4px solid $orange;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.reviews__list--hidden {
+    .reviews__item {
+        &:first-child {
+            border-top: none;
+        }
+    }
+}
+
+.reviews__item {
+    border-bottom: 1px solid #f5f5f5;
+    padding: 30px 30px 60px 30px;
+    display: flex;
+    flex-direction: row;
+
+    &:first-child {
+        border-top: 1px solid #f5f5f5;
+    }
+}
+
+.reviews__avatar {
+    height: 104px;
+    width: 104px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-right: 30px;
+}
+
+.reviews__desk {
+    width: 949px;
+    padding-left: 30px;
+    padding-top: 40px;
+}
+
+.reviews__row {
+
+    &:nth-child(odd) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            width: 100%;
+            border-bottom: 1px solid #e0e0e0;
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+
+    &:nth-child(even) {
+        padding-top: 35px;
+        font-family: 'Open Sans reg';
+        font-size: 16px;
+        color: #000;
+    }
+}
+
+.reviews__name {
+    font-family: 'Open Sans bold';
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+    padding-right: 25px;
+}
+
+.reviews__date {
+    font-family: 'Open Sans reg';
+    font-size: 14px;
+    color: #757575;
+    background-color: #fff;
+    padding-left: 25px;
+}
