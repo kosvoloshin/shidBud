@@ -1,0 +1,133 @@
+.news--page {
+    padding: 90px 0px;;
+}
+
+.news--aside {
+    .news__date {
+        display: none;
+    }
+} 
+
+.news__title {
+    margin: 0;
+    font-family: 'Open Sans bold';
+    font-size: 26px;
+    color: #000;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 45px;
+
+    &:before {
+        content: "";
+        width: 145px;
+        border-bottom: 4px solid #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    &::after {
+        content: "";
+        width: 100%;
+        border-bottom: 4px solid $orange;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.news__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.news__item {
+    width: 358px;
+    height: 360px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &:hover {
+        .news__image {
+            height: 0;
+        }
+
+        .news__desk {
+            height: 100%;
+        }
+    }
+
+    &:nth-child(1) {
+        .news__image {
+            background-image: url(../images/news-1.jpg);
+        }
+    }
+
+    &:nth-child(2) {
+        .news__image {
+            background-image: url(../images/news-2.jpg);
+        }
+    }
+
+    &:nth-child(3) {
+        .news__image {
+            background-image: url(../images/news-3.jpg);
+        }
+    }
+
+    &:nth-child(4) {
+        .news__image {
+            background-image: url(../images/news-4.jpg);
+        }
+    }
+}
+
+.news__image {
+    background-image: url(../images/news-4.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 214px;
+    position: relative;
+    transition: .3s;
+}
+
+.news__date {
+    background-color: $orange;
+    font-family: 'Open Sans reg';
+    font-size: 16px;
+    color: #fff;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+}
+
+.news__desk {
+    height: 146px;
+    background-color: #000;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    transition: .3s;
+    width: 100%;
+}
+
+.news__desk-title {
+    font-family: 'Open Sans bold';
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+    margin-bottom: 23px;
+}
+
+.news__desk-text {
+    font-family: 'Open Sans reg';
+    font-size: 16px;
+    color: #fff;
+}

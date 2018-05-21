@@ -1,0 +1,35 @@
+.crumbs {
+    width: 100%;
+    background-color: #000;
+}
+
+.crumbs__list {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    padding: 25px 0;
+}
+
+.crumbs__item {
+    margin-right: 14px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.crumbs__breadcrumbs {
+    font-family: 'Open Sans reg';
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: .2s;
+
+    &.active {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    &:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+}

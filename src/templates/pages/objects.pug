@@ -1,0 +1,137 @@
+extends ../template
+
+block variables
+    - var title = 'Объекты'
+
+block content
+    .wrapper
+        header.header.container#top.header--no-flex1
+            .header__row
+                .logo
+                    a.logo__link(href="index.html")
+                        img.logo__image(src="./assets/images/logo-b.png")
+                .contacts
+                    ul.contacts__list
+                        li.contacts__item info@shidbud.com
+                        li.contacts__item +38 099 789 98 78
+                        li.contacts__item +38 093 789 98 78
+                        li.contacts__item +38 097 789 98 78
+                        li.contacts__item Пн-Пт 09:00 - 17:00
+            .header__row
+                .menu
+                    ul.menu__list
+                        li.menu__item
+                            a.menu__link(href="index.html") главная
+                        li.menu__item
+                            a.menu__link(href="#") о компании
+                        li.menu__item
+                            a.menu__link(href="#") услуги
+                        li.menu__item
+                            a.menu__link.active(href="objects.html") объекты
+                        li.menu__item
+                            a.menu__link(href="news.html") новости
+                        li.menu__item
+                            a.menu__link(href="#") документы
+                        li.menu__item
+                            a.menu__link(href="#") контакты
+        .crumbs
+            .container
+                ul.crumbs__list
+                    li.crumbs__item
+                        a.crumbs__link(href="index.html"): img.crumbs__breadcrumbs(alt="home" src="./assets/images/home-icon.png")
+                    li.crumbs__item
+                        a.crumbs__link(href="#"): img.crumbs__breadcrumbs.crumbs__breadcrumbs_arrow(alt="arrow" src="./assets/images/arrow.png")    
+                    li.crumbs__item 
+                        a.crumbs__link(href="#") 
+                            .crumbs__breadcrumbs Объекты
+        section.section.obj
+            h1.visuallyhidden objects  
+            .container
+                h2.obj__title Объекты
+                ul.obj__list
+                    li.obj__item
+                        a.obj__link(href="objects-in.html")
+                            .obj__image
+                            .obj__desk
+                                h3.obj__desk-title Бизнес центр “Watergate”
+                                .obj__desk-text
+                                    p г. Киев, ул. Белорусская, 36-А если адрес в три строчки
+                    li.obj__item
+                        a.obj__link(href="objects-in.html")
+                            .obj__image
+                            .obj__desk
+                                h3.obj__desk-title Мебельный дом “Paradise”
+                                .obj__desk-text
+                                    p г. Киев, ул. Назаровская, 11
+                    li.obj__item
+                        a.obj__link(href="objects-in.html")
+                            .obj__image
+                            .obj__desk
+                                h3.obj__desk-title Жилищно-офисный комплекс
+                                .obj__desk-text
+                                    p г. Киев, ул. Василия Липковского, 18
+                    li.obj__item
+                        a.obj__link(href="objects-in.html")
+                            .obj__image
+                            .obj__desk
+                                h3.obj__desk-title Жилое помещение “студия”
+                                .obj__desk-text
+                                    p г. Киев, ул. Р. Окипной, 10, 10-А, 10-Б
+                    li.obj__item
+                        a.obj__link(href="objects-in.html")
+                            .obj__image
+                            .obj__desk
+                                h3.obj__desk-title Бизнес центр “Риальто”
+                                .obj__desk-text
+                                    p г. Киев, ул. Новоконстантиновская, 18
+                    li.obj__item
+                        a.obj__link(href="objects-in.html")
+                            .obj__image
+                            .obj__desk
+                                h3.obj__desk-title Жилое помещение “студия”
+                                .obj__desk-text
+                                    p Киев, ул. Б. Хмельницкого 34-а
+                    li.obj__item
+                        a.obj__link(href="objects-in.html")
+                            .obj__image
+                            .obj__desk
+                                h3.obj__desk-title Бизнес центр “Watergate”
+                                .obj__desk-text
+                                    p г. Киев, ул. Белорусская, 36-А если адрес в три строчки
+                    li.obj__item
+                        a.obj__link(href="objects-in.html")
+                            .obj__image
+                            .obj__desk
+                                h3.obj__desk-title Мебельный дом “Paradise”
+                                .obj__desk-text
+                                    p г. Киев, ул. Назаровская, 11
+                    li.obj__item
+                        a.obj__link(href="objects-in.html")
+                            .obj__image
+                            .obj__desk
+                                h3.obj__desk-title Жилищно-офисный комплекс
+                                .obj__desk-text
+                                    p г. Киев, ул. Василия Липковского, 18
+                    li.obj__item
+                        a.obj__link(href="objects-in.html")
+                            .obj__image
+                            .obj__desk
+                                h3.obj__desk-title Жилое помещение “студия”
+                                .obj__desk-text
+                                    p г. Киев, ул. Р. Окипной, 10, 10-А, 10-Б
+                    li.obj__item
+                        a.obj__link(href="objects-in.html")
+                            .obj__image
+                            .obj__desk
+                                h3.obj__desk-title Бизнес центр “Риальто”
+                                .obj__desk-text
+                                    p г. Киев, ул. Новоконстантиновская, 18
+                    li.obj__item
+                        a.obj__link(href="objects-in.html")
+                            .obj__image
+                            .obj__desk
+                                h3.obj__desk-title Жилое помещение “студия”
+                                .obj__desk-text
+                                    p Киев, ул. Б. Хмельницкого 34-а
+        include ../common/pagination.pug  
+        include ../common/footer.pug   
