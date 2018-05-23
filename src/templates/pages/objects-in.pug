@@ -1,7 +1,7 @@
 extends ../template
 
 block variables
-    - var title = 'Новости'
+    - var title = 'Объекты'
 
 block content
     .wrapper
@@ -27,9 +27,9 @@ block content
                         li.menu__item
                             a.menu__link(href="service.html") услуги
                         li.menu__item
-                            a.menu__link(href="objects.html") объекты
+                            a.menu__link.active(href="objects.html") объекты
                         li.menu__item
-                            a.menu__link.active(href="news.html") новости
+                            a.menu__link(href="news.html") новости
                         li.menu__item
                             a.menu__link(href="documents.html") документы
                         li.menu__item
@@ -43,54 +43,49 @@ block content
                         a.crumbs__link(href="#"): img.crumbs__breadcrumbs.crumbs__breadcrumbs_arrow(alt="arrow" src="./assets/images/arrow.png")    
                     li.crumbs__item 
                         a.crumbs__link(href="#") 
-                            .crumbs__breadcrumbs.active Новости 
+                            .crumbs__breadcrumbs.active Объекты
                     li.crumbs__item
                         a.crumbs__link(href="#"): img.crumbs__breadcrumbs.crumbs__breadcrumbs_arrow(alt="arrow" src="./assets/images/arrow.png")    
                     li.crumbs__item 
                         a.crumbs__link(href="#") 
-                            .crumbs__breadcrumbs Обеспечение нашей деятельности
+                            .crumbs__breadcrumbs Бизнес центр "Watergate"
         section.section.blog
-            h1.visuallyhidden news-in
+            h1.visuallyhidden objects-in
             .container
                 .blog__content
                     .blog__main
                         .blog__title-wrap
-                            h2.blog__title Обеспечение нашей деятельности и
-                                br
-                                | идейный соображения
-                        .blog__date 28.09.2018
-                        p: img(alt="image-blog" src="./assets/images/news-1.jpg")
+                            h2.blog__title Бизнес центр "Watergate"
+                        .blog__adres г. Киев, ул. Белорусская, 36-А
+                        p: img(alt="image-blog" src="./assets/images/obj-6.jpg")
                         p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и реализации дальнейших направлений развития. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации модели развития.
                         p Разнообразный и богатый опыт начало повседневной работы по формированию позиции требуют от нас анализа соответствующий условий активизации. Равным образом консультация с широким активом позволяет выполнять важные задания по разработке дальнейших направлений развития. Товарищи! постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации модели развития. Равным образом укрепление и развитие структуры требуют от нас анализа направлений прогрессивного развития. Не следует, однако забывать, что сложившаяся структура организации позволяет оценить значение систем массового участия. Не следует, однако забывать, что реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям.
-                        p: img(alt="image-blog" src="./assets/images/news-4.jpg")
+                        p: img(alt="image-blog" src="./assets/images/obj-5.jpg")
                         p Идейные соображения высшего порядка, а также консультация с широким активом способствует подготовки и реализации дальнейших направлений развития. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации модели развития.
                         p Разнообразный и богатый опыт начало повседневной работы по формированию позиции требуют от нас анализа соответствующий условий активизации. Равным образом консультация с широким активом позволяет выполнять важные задания по разработке дальнейших направлений развития. Товарищи! постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации модели развития. Равным образом укрепление и развитие структуры требуют от нас анализа направлений прогрессивного развития. Не следует, однако забывать, что сложившаяся структура организации позволяет оценить значение систем массового участия. Не следует, однако забывать, что реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям.
                     aside.aside
-                        h3.aside__title Читайте также
-                        .news.news--aside
-                            ul.news__list
-                                li.news__item
-                                    a.news__link(href="news-in.html")
-                                        .news__image
-                                            .news__date 28.09.2018
-                                        .news__desk
-                                            h3.news__desk-title Обеспечение нашей деятельности и идейные соображения
-                                            .news__desk-text
-                                                p Идейные соображения высшего порядка, а также консультация с широким ...
-                                li.news__item
-                                    a.news__link(href="news-in.html")
-                                        .news__image
-                                            .news__date 28.09.2018
-                                        .news__desk
-                                            h3.news__desk-title Обеспечение нашей деятельности и идейные соображения
-                                            .news__desk-text
-                                                p Идейные соображения высшего порядка, а также консультация с широким ...
-                                li.news__item
-                                    a.news__link(href="news-in.html")
-                                        .news__image
-                                            .news__date 28.09.2018
-                                        .news__desk
-                                            h3.news__desk-title Обеспечение нашей деятельности и идейные соображения
-                                            .news__desk-text
-                                                p Идейные соображения высшего порядка, а также консультация с широким ...
+                        h3.aside__title.aside__title--obj Другие объекты
+                        .obj.obj--aside
+                             ul.obj__list
+                                li.obj__item
+                                    a.obj__link(href="objects-in.html")
+                                        .obj__image
+                                        .obj__desk
+                                            h3.obj__desk-title Бизнес центр “Watergate”
+                                            .obj__desk-text
+                                                p г. Киев, ул. Белорусская, 36-А если адрес в три строчки
+                                li.obj__item
+                                    a.obj__link(href="objects-in.html")
+                                        .obj__image
+                                        .obj__desk
+                                            h3.obj__desk-title Мебельный дом “Paradise”
+                                            .obj__desk-text
+                                                p г. Киев, ул. Назаровская, 11
+                                li.obj__item
+                                    a.obj__link(href="objects-in.html")
+                                        .obj__image
+                                        .obj__desk
+                                            h3.obj__desk-title Жилищно-офисный комплекс
+                                            .obj__desk-text
+                                    p г. Киев, ул. Василия Липковского, 18
         include ../common/footer.pug 

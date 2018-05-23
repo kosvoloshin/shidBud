@@ -1,6 +1,10 @@
 .slider {
     width: 100%;
     height: 600px;
+
+    @include laptop {
+        height: 500px;
+    }
 }
 
 .slider__list {
@@ -25,10 +29,6 @@
     .image-wrap {
         position: absolute;
         top: 0;
-    }
-
-    .container {
-        height: 95%;
     }
 }
 
@@ -55,6 +55,18 @@
     width: 50%;
     max-width: 570px;
     padding-right: 15px;
+
+    @include laptop {
+        padding-right: 0;
+        padding-left: 15px;
+    }
+
+    @include tablets {
+        margin: 0 auto;
+        text-align: center;
+        padding-left: 0;
+        width: 400px;
+    }
 }
 
 .slider__title {
@@ -65,17 +77,30 @@
     margin: 0;
     margin-top: 160px;
     margin-bottom: 10px;
+
+    @include laptop {
+        margin-top: 100px;
+        font-size: 33px;
+    }
 }
 
 .slider__text {
     font-family: 'Open Sans reg';
     font-size: 16px;
     color: #fff;
+
+    @include laptop {
+        font-size: 14px;
+    }
 }
 
 .button {
     text-align: end;
     margin-top: 40px;
+
+    @include tablets {
+        text-align: center;
+    }
 }
 
 .button__link {
@@ -83,13 +108,76 @@
     font-size: 14px;
     color: #fff;
     background-color: $orange;
-    padding: 22px 30px;
+    padding: 18px 26px;
     transition: .3s;
     text-transform: uppercase;
     border-radius: 5px;
 
+    @include big-desktop {
+        padding: 22px 30px;
+    }
+
     &:hover {
         background-color: darken($orange, 5%);
+    }
+}
+
+#slideposition {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    z-index: 10;
+    bottom: 15px;
+
+    @include desktop {
+        display: block;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .indicator {
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 4px solid #fff;
+        margin-right: 20px;
+        position: relative;
+        transition: .3s;
+
+        &:before {
+            content: "";
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background-color: transparent;
+            transform: translate(15%, 15%);
+            position: absolute;
+            transition: .3s;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.active {
+            border: 4px solid $orange;
+            
+            &:before {
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+.controls {
+    @include desktop {
+        display: none;
     }
 }
 
@@ -111,7 +199,11 @@
     }
 
     &:first-child {
-        left: 60px;
+        left: 30px;
+
+        @include big-desktop {
+            left: 60px;
+        }
 
         .controls__arrow {
             margin-right: 18px;
@@ -119,7 +211,11 @@
     }
 
     &:last-child {
-        right: 60px;
+        right: 30px;
+
+        @include big-desktop {
+            right: 60px;
+        }
 
         .controls__arrow {
             margin-left: 18px;

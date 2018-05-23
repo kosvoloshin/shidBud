@@ -4,7 +4,6 @@
 }
 
 .objects__list {
-    width: 100%;
     display: flex;
     flex-flow: row wrap;
     align-content: stretch;
@@ -16,8 +15,21 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 640px;
+    height: 475px;
     width: 33.3%;
+
+    @include big-desktop {
+        height: 640px;
+    }
+
+    @include laptop {
+        width: 50%;
+        height: 400px;
+    }
+
+    @include tablets {
+        height: 300px;
+    }
 
     .image-wrap {
         background-color: rgba(0, 0, 0, 0.2);

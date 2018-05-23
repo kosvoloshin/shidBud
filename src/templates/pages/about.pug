@@ -1,0 +1,50 @@
+extends ../template
+
+block variables
+    - var title = 'О компании'
+
+block content
+    .wrapper
+        header.header.container#top.header--no-flex1
+            .header__row
+                .logo
+                    a.logo__link(href="index.html")
+                        img.logo__image(src="./assets/images/logo-b.png")
+                .contacts
+                    ul.contacts__list
+                        li.contacts__item info@shidbud.com
+                        li.contacts__item +38 099 789 98 78
+                        li.contacts__item +38 093 789 98 78
+                        li.contacts__item +38 097 789 98 78
+                        li.contacts__item Пн-Пт 09:00 - 17:00
+            .header__row
+                .menu
+                    ul.menu__list
+                        li.menu__item
+                            a.menu__link(href="index.html") главная
+                        li.menu__item
+                            a.menu__link.active(href="about.html") о компании
+                        li.menu__item
+                            a.menu__link(href="service.html") услуги
+                        li.menu__item
+                            a.menu__link(href="objects.html") объекты
+                        li.menu__item
+                            a.menu__link(href="news.html") новости
+                        li.menu__item
+                            a.menu__link(href="documents.html") документы
+                        li.menu__item
+                            a.menu__link(href="contacts.html") контакты
+        .crumbs
+            .container
+                ul.crumbs__list
+                    li.crumbs__item
+                        a.crumbs__link(href="index.html"): img.crumbs__breadcrumbs(alt="home" src="./assets/images/home-icon.png")
+                    li.crumbs__item
+                        a.crumbs__link(href="#"): img.crumbs__breadcrumbs.crumbs__breadcrumbs_arrow(alt="arrow" src="./assets/images/arrow.png")    
+                    li.crumbs__item 
+                        a.crumbs__link(href="#") 
+                            .crumbs__breadcrumbs.active О компании
+        section.section.about
+            h1.visuallyhidden about
+            .container
+        include ../common/footer.pug 

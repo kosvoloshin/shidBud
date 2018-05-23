@@ -28,6 +28,10 @@
     border-bottom: 4px solid transparent;
     padding: 2px 0;
 
+    @include laptop {
+        font-size: 13px;
+    }
+
     &:hover {
         color: $orange-t;
         border-bottom: 4px solid $orange-t;

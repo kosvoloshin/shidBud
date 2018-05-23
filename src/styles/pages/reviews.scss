@@ -17,11 +17,19 @@
 
     &::after {
         content: "";
-        width: 825px;
+        width: 665px;
         border-bottom: 4px solid $orange;
         position: absolute;
         bottom: 0;
         right: 0;
+
+        @include big-desktop {
+            width: 825px;
+        }
+
+        @include laptop {
+            width: 475px;
+        }
     }
 }
 
@@ -38,6 +46,10 @@
     padding: 30px 30px 60px 30px;
     display: flex;
     flex-direction: row;
+
+    @include tablets {
+        flex-direction: column;
+    }
 
     &:first-child {
         border-top: 1px solid #f5f5f5;
@@ -57,9 +69,22 @@
 }
 
 .reviews__desk {
-    width: 949px;
+    width: 746px;
     padding-left: 30px;
     padding-top: 40px;
+
+    @include big-desktop {
+        width: 949px;
+    }
+
+    @include laptop {
+        width: 556px;
+    }
+
+    @include tablets {
+        width: 100%;
+        padding-left: 0;
+    }
 }
 
 .reviews__row {

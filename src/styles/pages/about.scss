@@ -8,8 +8,20 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 600px;
+    height: 500px;
     width: 50%;
+
+    @include big-desktop {
+        height: 600px;
+    }
+
+    @include laptop {
+        height: 400px;
+    }
+
+    @include tablets {
+        display: none;
+    }
 
     .image-wrap {
         background-color: rgba(0, 0, 0, 0.2);
@@ -22,40 +34,102 @@
 .about-r {
     width: 50%;
     height: 100%;
-    max-height: 600px;
-    padding: 90px 0 112px 0;
+    max-height: 500px;
+    padding: 50px 0 72px 0;
+
+    @include big-desktop {
+        max-height: 600px;
+        padding: 90px 0 112px 0;
+    }
+
+    @include laptop {
+        max-height: 400px;
+    }
+
+    @include tablets {
+        width: 90%;
+        margin: 0 auto;
+        max-height: initial;
+    }
 }
 
 .about-r__desk {
-    width: 570px;
+    width: 470px;
     height: 100%;
     padding-left: 45px;
 
+    @include big-desktop {
+        width: 570px;
+    }
+
+    @include laptop {
+        width: 375px;
+        padding-left: 30px;
+        padding-right: 15px;
+    }
+
+    @include tablets {
+        width: 100%;
+    }
+
     .button {
-        margin-top: 112px;
+        margin-top: 75px;
+
+        @include big-desktop {
+            margin-top: 112px;
+        }
+
+        @include laptop {
+            margin-top: 30px;
+        }
+
+        @include tablets {
+            margin-top: 60px;
+        }
     }
 }
 
 .about-r__title {
     margin: 0;
     font-family: 'Open Sans bold';
-    font-size: 26px;
+    font-size: 24px;
     color: #000;
     position: relative;
-    margin-bottom: 65px;
+    margin-bottom: 45px;
 
-    &::after {
+    @include big-desktop {
+        margin-bottom: 65px;
+        font-size: 26px;
+    }
+
+    &:after {
         content: "";
-        width: 306px;
+        width: 240px;
         border-bottom: 4px solid $orange;
         position: absolute;
         bottom: 0;
         right: 0;
+
+        @include big-desktop {
+            width: 306px;
+        }
+
+        @include laptop {
+            width: 145px;
+        }
     }
 }
 
 .about-r__text {
     font-family: 'Open Sans reg';
-    font-size: 16px;
+    font-size: 15px;
     color: #000;
+
+    @include big-desktop {
+        font-size: 16px;
+    }
+
+    @include laptop {
+        font-size: 13px;
+    }
 }

@@ -11,11 +11,22 @@
 }
 
 .container {
-    //height: 100%;
     width: 100%;
-    max-width: 1140px;
+    max-width: 940px;
     margin: 0 auto;
     position: relative;
+
+    @include big-desktop {
+        max-width: 1140px;
+    }
+
+    @include laptop {
+        max-width: 750px;
+    }
+
+    @include tablets {
+        max-width: 90%;
+    }
 }
 
 .footer {
