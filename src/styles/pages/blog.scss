@@ -5,11 +5,15 @@
 .blog__content {
     width: 100%;
     display: flex;
+
+    @include tablets {
+        flex-direction: column;
+    }
 }
 
 .blog__main {
     width: 100%;
-    min-width: 748px;
+    min-width: 600px;
     margin-right: 30px;
 
     p {
@@ -21,6 +25,18 @@
 
     img {
         width: 100%;
+    }
+
+    @include big-desktop {
+        min-width: 748px;
+    }
+
+    @include laptop {
+        min-width: 460px;
+    }
+
+    @include tablets {
+        min-width: 100%;
     }
 }
 
@@ -44,23 +60,11 @@
     font-family: 'Open Sans bold';
     font-size: 30px;
     color: #000;
-    //margin-bottom: 20px;
     position: relative;
     display: inline-block;
     background-color: #fff;
     z-index: 1;
-    //padding-bottom: 20px;
     padding-right: 30px;
-
-    /*&:after {
-        content: "";
-        height: 4px;
-        width: 510px;
-        background-color: $orange;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }*/
 }
 
 .blog__date {
@@ -81,7 +85,46 @@
 
 .aside {
     width: 100%;
-    min-width: 362px;
+    min-width: 280px;
+
+    @include big-desktop {
+        min-width: 362px;
+    }
+
+    @include laptop {
+        min-width: 230px;
+
+        .obj__item {
+            height: 270px;
+        }
+
+        .obj__image {
+            height: 70%;
+        }
+
+        .obj__desk {
+            height: 30%;
+        }
+    }
+
+    @include tablets {
+        min-width: 100%;
+    }
+}
+
+.aside__title-wrap {
+    position: relative;
+    margin-bottom: 60px;
+    
+    &:after {
+        content: "";
+        height: 4px;
+        width: 100%;
+        background-color: $orange;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 }
 
 .aside__title {
@@ -91,20 +134,22 @@
     color: #000;
     margin-bottom: 60px;
     position: relative;
-
-    &:after {
-        content: "";
-        height: 4px;
-        width: 97px;
-        background-color: $orange;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }
+    display: inline-block;
+    background-color: #fff;
+    z-index: 1;
+    padding-right: 30px;
 }
 
 .aside__title--obj {
     &:after {
-        width: 80px;
+        width: 0;
+
+        @include big-desktop {
+            width: 80px;
+        }
     }
+}
+
+.aside__title--news {
+    margin-bottom: 0;
 }

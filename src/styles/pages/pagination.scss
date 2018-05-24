@@ -44,6 +44,11 @@
             left: 35%;
         }
     }
+
+    @include tablets {
+        height: 35px;
+        width: 35px;
+    }
 }
 
 .pagination__list {
@@ -67,6 +72,17 @@
             color: #fff;
         }
     }
+
+    @include tablets {
+        height: 35px;
+        width: 35px;
+    }
+}
+
+.pagination__item_hidden {
+    @include phones {
+        display: none;
+    }
 }
 
 .pagination__link {
@@ -78,5 +94,9 @@
 
     &:hover {
         color: $orange;
+    }
+
+    @include tablets {
+        font-size: 14px;
     }
 }

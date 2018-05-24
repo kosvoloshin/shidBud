@@ -5,3 +5,5 @@ require('./common/reviews-btn');
 require('./common/smooth-scroll');
 
 require('./common/google-map');
+
+require('./common/hamburger');

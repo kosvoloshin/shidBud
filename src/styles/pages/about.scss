@@ -72,6 +72,10 @@
         width: 100%;
     }
 
+    @include phones {
+        padding: 0;
+    }
+
     .button {
         margin-top: 75px;
 
@@ -89,34 +93,35 @@
     }
 }
 
+.about-r__title-wrap {
+    position: relative;
+    margin-bottom: 45px;
+    
+    &:after {
+        content: "";
+        height: 4px;
+        width: 100%;
+        background-color: $orange;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
 .about-r__title {
     margin: 0;
     font-family: 'Open Sans bold';
     font-size: 24px;
     color: #000;
     position: relative;
-    margin-bottom: 45px;
+    display: inline-block;
+    background-color: #fff;
+    z-index: 1;
+    padding-right: 30px;
 
     @include big-desktop {
         margin-bottom: 65px;
         font-size: 26px;
-    }
-
-    &:after {
-        content: "";
-        width: 240px;
-        border-bottom: 4px solid $orange;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-
-        @include big-desktop {
-            width: 306px;
-        }
-
-        @include laptop {
-            width: 145px;
-        }
     }
 }
 

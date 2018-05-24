@@ -19,6 +19,8 @@ block content
                         li.contacts__item Пн-Пт 09:00 - 17:00
             .header__row
                 .menu
+                    button(type="button").hamburger#openFull
+                        .hamburger__menu
                     ul.menu__list
                         li.menu__item
                             a.menu__link(href="index.html") главная
@@ -42,7 +44,7 @@ block content
                     li.crumbs__item
                         a.crumbs__link(href="#"): img.crumbs__breadcrumbs.crumbs__breadcrumbs_arrow(alt="arrow" src="./assets/images/arrow.png")    
                     li.crumbs__item 
-                        a.crumbs__link(href="#") 
+                        a.crumbs__link(href="contacts.html") 
                             .crumbs__breadcrumbs.active Контакты
         section.section.contacts-page
             h1.visuallyhidden contacts

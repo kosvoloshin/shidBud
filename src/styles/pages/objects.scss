@@ -31,6 +31,11 @@
         height: 300px;
     }
 
+    @include phones {
+        height: 360px;
+        width: 100%;
+    }
+
     .image-wrap {
         background-color: rgba(0, 0, 0, 0.2);
         display: flex;
@@ -41,6 +46,16 @@
     }
 
     &:hover {
+        .image-wrap {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .image-wrap__text {
+            opacity: 1;
+        }
+    }
+
+    @include tablets {
         .image-wrap {
             background-color: rgba(0, 0, 0, 0.7);
         }
