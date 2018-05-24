@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/styles/app.min.css">
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon-bud.ico">
     <script src="./assets/scripts/bundle.js" defer></script>
+    <script src="./assets/scripts/hamburger.js" defer></script>
     <script src="./assets/scripts/smooth-scroll.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   </head>
@@ -30,14 +31,17 @@
         </div>
         <div class="header__row">
           <div class="menu">
+            <button class="hamburger" type="button" id="openFull">
+              <div class="hamburger__menu"></div>
+            </button>
             <ul class="menu__list">
               <li class="menu__item"><a class="menu__link" href="index.html">главная</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">о компании</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">услуги</a></li>
+              <li class="menu__item"><a class="menu__link" href="about.html">о компании</a></li>
+              <li class="menu__item"><a class="menu__link" href="service.html">услуги</a></li>
               <li class="menu__item"><a class="menu__link" href="objects.html">объекты</a></li>
               <li class="menu__item"><a class="menu__link active" href="news.html">новости</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">документы</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">контакты</a></li>
+              <li class="menu__item"><a class="menu__link" href="documents.html">документы</a></li>
+              <li class="menu__item"><a class="menu__link" href="contacts.html">контакты</a></li>
             </ul>
           </div>
         </div>
@@ -47,7 +51,7 @@
           <ul class="crumbs__list">
             <li class="crumbs__item"><a class="crumbs__link" href="index.html"><img class="crumbs__breadcrumbs" alt="home" src="./assets/images/home-icon.png"></a></li>
             <li class="crumbs__item"><a class="crumbs__link" href="#"><img class="crumbs__breadcrumbs crumbs__breadcrumbs_arrow" alt="arrow" src="./assets/images/arrow.png"></a></li>
-            <li class="crumbs__item"> <a class="crumbs__link" href="#"> 
+            <li class="crumbs__item"> <a class="crumbs__link" href="news.html"> 
                 <div class="crumbs__breadcrumbs">Новости  </div></a></li>
           </ul>
         </div>
@@ -55,7 +59,9 @@
       <section class="section news news--page">
         <h1 class="visuallyhidden">news</h1>
         <div class="container">
-          <h2 class="news__title">Новости</h2>
+          <div class="news__title-wrap">
+            <h2 class="news__title">Новости</h2>
+          </div>
           <ul class="news__list">
             <li class="news__item"><a class="news__link" href="news-in.html">
                 <div class="news__image">

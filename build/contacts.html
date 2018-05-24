@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Контакты</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon-bud.ico">
+    <script src="./assets/scripts/bundle.js" defer></script>
+    <script src="./assets/scripts/hamburger.js" defer></script>
+    <script src="./assets/scripts/google-map.js" defer></script>
+    <script src="./assets/scripts/smooth-scroll.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header container header--no-flex1" id="top">
+        <div class="header__row">
+          <div class="logo"><a class="logo__link" href="index.html"><img class="logo__image" src="./assets/images/logo-b.png"></a></div>
+          <div class="contacts">
+            <ul class="contacts__list">
+              <li class="contacts__item">info@shidbud.com</li>
+              <li class="contacts__item">+38 099 789 98 78</li>
+              <li class="contacts__item">+38 093 789 98 78</li>
+              <li class="contacts__item">+38 097 789 98 78</li>
+              <li class="contacts__item">Пн-Пт 09:00 - 17:00</li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__row">
+          <div class="menu">
+            <button class="hamburger" type="button" id="openFull">
+              <div class="hamburger__menu"></div>
+            </button>
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link" href="index.html">главная</a></li>
+              <li class="menu__item"><a class="menu__link" href="about.html">о компании</a></li>
+              <li class="menu__item"><a class="menu__link" href="service.html">услуги</a></li>
+              <li class="menu__item"><a class="menu__link" href="objects.html">объекты</a></li>
+              <li class="menu__item"><a class="menu__link" href="news.html">новости</a></li>
+              <li class="menu__item"><a class="menu__link" href="documents.html">документы</a></li>
+              <li class="menu__item"><a class="menu__link active" href="contacts.html">контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="crumbs">
+        <div class="container">
+          <ul class="crumbs__list">
+            <li class="crumbs__item"><a class="crumbs__link" href="index.html"><img class="crumbs__breadcrumbs" alt="home" src="./assets/images/home-icon.png"></a></li>
+            <li class="crumbs__item"><a class="crumbs__link" href="#"><img class="crumbs__breadcrumbs crumbs__breadcrumbs_arrow" alt="arrow" src="./assets/images/arrow.png"></a></li>
+            <li class="crumbs__item"> <a class="crumbs__link" href="contacts.html"> 
+                <div class="crumbs__breadcrumbs active">Контакты</div></a></li>
+          </ul>
+        </div>
+      </div>
+      <section class="section contacts-page">
+        <h1 class="visuallyhidden">contacts</h1>
+        <div class="container">
+          <div class="contacts-page__title-wrap">
+            <h2 class="contacts-page__title">Контакты</h2>
+          </div>
+          <div class="contacts-page__content">
+            <div class="contacts-page__left">
+              <ul class="contacts-page__list">
+                <li class="contacts-page__item">
+                  <div class="contacts-page__subject">Телефон:</div>
+                  <p>+38 099 789 98 78</p>
+                  <p>+38 099 789 98 78</p>
+                  <p>+38 099 789 98 78</p>
+                </li>
+                <li class="contacts-page__item">
+                  <div class="contacts-page__subject">E-mail:</div>
+                  <p>efimov@stroitel.org.ua</p>
+                </li>
+                <li class="contacts-page__item">
+                  <div class="contacts-page__subject">Адрес:</div>
+                  <p>Украина, 93400</p>
+                  <p>Северодонецк, пр-кт Дружбы Народов, 34</p>
+                </li>
+                <li class="contacts-page__item">
+                  <div class="contacts-page__subject">График работы:</div>
+                  <p>Пн-Пт 09:00 - 17:00</p>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts-page__right">
+              <div class="contacts-page__map" id="map"></div>
+              <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFcn6Ule12Zm60uylp3xfejAO_jkXvyn8&amp;callback=initMap"></script>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="logo"><a class="logo__link" href="index.html"><img class="logo__image" src="./assets/images/logo-f.png"></a></div>
+          <div class="button button--up"><a class="button__link" href="#top"><img class="button__arrow-up" src="./assets/images/arrow-up.png"></a></div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
