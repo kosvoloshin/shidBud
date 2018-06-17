@@ -36,10 +36,17 @@
 }
 
 .news__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    //display: flex;
+    //flex-wrap: wrap;
+    //justify-content: space-between;
     width: 100%;
+    display: inline-block;
+    font-size: 117px;
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .news__item {
@@ -47,6 +54,7 @@
     height: 300px;
     margin-bottom: 30px;
     position: relative;
+    display: inline-block;
 
     @include big-desktop {
         width: 358px;
@@ -60,8 +68,9 @@
 
     @include tablets {
         width: 100%;
-        height: auto;
-        min-height: 400px;
+        //height: auto;
+        //min-height: 400px;
+        height: 400px;
     }
 
     @include phones {

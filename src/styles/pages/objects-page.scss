@@ -34,13 +34,18 @@
 }
 
 .obj__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     width: 100%;
+    display: inline-block;
+    font-size: 117px;
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .obj__item {
+    display: inline-block;
     width: 293px;
     height: 270px;
     margin-bottom: 30px;
@@ -58,8 +63,7 @@
 
     @include tablets {
         width: 100%;
-        height: auto;
-        min-height: 400px;
+        height: 400px;
     }
 
     @include phones {
