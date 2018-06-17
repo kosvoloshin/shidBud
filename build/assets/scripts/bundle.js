@@ -1,5 +1,3 @@
-const $ = require('jquery');
-
 $(document).ready(function() {
     if($('#reviews-btn').length){
       $("document").ready(function($){
